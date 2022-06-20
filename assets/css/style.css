@@ -8,10 +8,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
+
 body {
-  font-family: Source Code Pro, serif;
   color: white;
   background-color: #1D2226;
+  font-family: Source Code Pro, sans-serif;
 }
 
 a {
@@ -145,6 +148,14 @@ h1, h2, h3, h4, h5, h6 {
 /**
 * Desktop Navigation 
 */
+
+.logo{
+  width: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  left: 1.7rem;
+
+}
 .nav-menu {
   padding: 0;
   display: block;
