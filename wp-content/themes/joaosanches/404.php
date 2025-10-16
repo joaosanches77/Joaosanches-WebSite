@@ -15,17 +15,17 @@ $heading = get_field("page404", "options");
                     <?php if ($heading && $heading["title"]) : ?>
                         <h2 class="s-56 w-700 color--dark"><?= $heading["title"]; ?></h2>
                     <?php else : ?>
-                        <h2 class="s-56 w-700 color--dark"><?php _e("Página não encontrada", "verdagua"); ?></h2>
+                        <h2 class="s-56 w-700 color--dark"><?php _e("Página não encontrada", "joaosanches"); ?></h2>
                     <?php endif; ?>
                     <?php if ($heading && $heading["text"]) : ?>
                         <h6 class="s-22 color--grey"><?= $heading["text"]; ?> </h6>
                     <?php else : ?>
                         <h6 class="s-22 color--grey">
-                            <?php _e("Oops! The page you are looking for might have been moved, renamed or might never existed", "verdagua"); ?>
+                            <?php _e("Oops! The page you are looking for might have been moved, renamed or might never existed", "joaosanches"); ?>
                         </h6>
                     <?php endif; ?>
 
-                    <a href="<?= get_home_url(); ?>" class="btn btn--theme hover--theme"><?php _e("Voltar para a homepage", "verdagua"); ?></a>
+                    <a href="<?= get_home_url(); ?>" class="btn btn--theme hover--theme"><?php _e("Voltar para a homepage", "joaosanches"); ?></a>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 /*! Theme Script
- * https://lavva.agency/ */
+ * https://joaosanches.agency/ */
 jQuery(document).ready(function ($) {
   console.log("=== VERSION 001 ===");
 

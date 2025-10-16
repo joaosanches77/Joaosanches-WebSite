@@ -60,13 +60,15 @@ $social = function_exists('get_field') ? get_field("social", "options") : null;
 
       <div class="lg:col-span-2 flex justify-center sm:justify-start gap-10 sm:gap-7 md:gap-20 lg:gap-32">
         <div>
-          <p class="text-sm font-semibold text-green-04 uppercase tracking-wider"><?php _e("Menu", "verdagua"); ?></p>
+          <p class="text-sm font-semibold text-green-04 uppercase tracking-wider"><?php _e("Menu", "joaosanches"); ?>
+          </p>
           <div class="mt-4">
             <?php nav_footer_menu(); ?>
           </div>
         </div>
         <div>
-          <p class="text-sm font-semibold text-green-04 uppercase tracking-wider"><?php _e("Redes", "verdagua"); ?></p>
+          <p class="text-sm font-semibold text-green-04 uppercase tracking-wider"><?php _e("Redes", "joaosanches"); ?>
+          </p>
           <div class="mt-4">
             <?php if (!empty($social) && is_array($social)): ?>
               <div class="flex flex-col gap-1">
@@ -83,12 +85,14 @@ $social = function_exists('get_field') ? get_field("social", "options") : null;
           </div>
         </div>
         <div>
-          <p class="text-sm font-semibold text-green-04 uppercase tracking-wider"><?php _e("Contactos", "verdagua"); ?>
+          <p class="text-sm font-semibold text-green-04 uppercase tracking-wider">
+            <?php _e("Contactos", "joaosanches"); ?>
           </p>
           <div class="mt-4 space-y-2 text-green-01 font-medium">
             <p><a href="tel:+351232094476" class="hover:text-green-03 lv-transition"> <?= $contacts["phone"] ?></a>
             </p>
-            <p><a href="mailto:info@verdagua.pt" class="hover:text-green-03 lv-transition"><?= $contacts["email"] ?></a>
+            <p><a href="mailto:info@joaosanches.pt"
+                class="hover:text-green-03 lv-transition"><?= $contacts["email"] ?></a>
             </p>
           </div>
         </div>
@@ -115,7 +119,8 @@ $social = function_exists('get_field') ? get_field("social", "options") : null;
         <?php endif; ?>
       </div>
       <div class="flex justify-center text-green-01 lv-transition hover:text-grey-02">
-        <a href="https://www.lavva.pt/" target="_blank" rel="noopener noreferrer" aria-label="link to author - lavva">
+        <a href="https://www.joaosanches.pt/" target="_blank" rel="noopener noreferrer"
+          aria-label="link to author - joaosanches">
           <svg class='h-5' viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M1.092 14V4.48H2.87L5.796 11.466L6.076 12.32L6.37 11.466L9.282 4.48H11.004V14H9.716V6.034L9.044 7.91L6.496 14H5.586L3.038 7.896L2.38 6.076V14H1.092ZM13.5136 8.988H12.2816C12.5196 7.35 13.5976 6.384 15.4176 6.384C17.4056 6.384 18.3716 7.546 18.3716 9.282V12.208C18.3716 13.062 18.4416 13.594 18.6376 14H17.3356C17.1956 13.706 17.1536 13.272 17.1396 12.824C16.5096 13.762 15.5016 14.168 14.6056 14.168C13.0656 14.168 12.0296 13.454 12.0296 12.04C12.0296 11.018 12.5896 10.276 13.6816 9.912C14.6896 9.576 15.7116 9.492 17.1396 9.478V9.31C17.1396 8.106 16.5796 7.448 15.3056 7.448C14.2416 7.448 13.6676 8.036 13.5136 8.988ZM13.2896 12.012C13.2896 12.698 13.8636 13.104 14.7316 13.104C16.1036 13.104 17.1396 12.026 17.1396 10.752V10.402C13.9756 10.43 13.2896 11.102 13.2896 12.012ZM22.4773 14.168C20.5033 14.168 19.3133 12.712 19.3133 10.29C19.3133 7.77 20.5313 6.384 22.4773 6.384C23.3593 6.384 24.0733 6.748 24.5633 7.434V3.92H25.7953V14H24.5633V13.062C24.0733 13.762 23.3593 14.168 22.4773 14.168ZM22.5613 13.104C23.8633 13.104 24.5633 12.11 24.5633 10.29C24.5633 8.484 23.8353 7.448 22.5613 7.448C21.2733 7.448 20.5733 8.456 20.5733 10.29C20.5733 12.082 21.3013 13.104 22.5613 13.104ZM33.4837 11.578C33.0777 13.314 31.8317 14.168 30.1377 14.168C27.9817 14.168 26.6797 12.712 26.6797 10.29C26.6797 7.77 27.9817 6.384 30.0677 6.384C32.1677 6.384 33.4277 7.826 33.4277 10.192V10.5H27.9397C28.0097 12.166 28.7937 13.104 30.1377 13.104C31.1877 13.104 31.9297 12.6 32.1957 11.578H33.4837ZM30.0677 7.448C28.8777 7.448 28.1637 8.19 27.9817 9.576H32.1397C31.9717 8.204 31.2297 7.448 30.0677 7.448ZM37.7042 14H36.4722V3.92H37.7042V7.49C38.1942 6.79 38.9082 6.384 39.7902 6.384C41.7642 6.384 42.9542 7.84 42.9542 10.262C42.9542 12.782 41.7362 14.168 39.7902 14.168C38.9082 14.168 38.1942 13.804 37.7042 13.118V14ZM39.7062 7.448C38.4042 7.448 37.7042 8.442 37.7042 10.262C37.7042 12.068 38.4322 13.104 39.7062 13.104C40.9942 13.104 41.6942 12.096 41.6942 10.262C41.6942 8.47 40.9662 7.448 39.7062 7.448ZM43.9695 17.248C43.6895 17.248 43.3955 17.178 43.2415 17.136V16.184H43.6195C44.5295 16.184 44.7815 16.002 45.5095 14.336L45.7615 13.762L42.7235 6.566H44.0535L46.0695 11.48L46.4055 12.474L46.7415 11.48L48.7015 6.566H49.9615L46.4895 14.98C45.7475 16.772 45.2575 17.248 43.9695 17.248Z"

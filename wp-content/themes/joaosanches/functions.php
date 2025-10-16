@@ -1,6 +1,6 @@
 <?php
 /**
- * Funções e definições do tema Verdagua
+ * Funções e definições do tema joaosanches
  */
 
 // -----------------------------------------------------------------------------
@@ -15,7 +15,7 @@ define('THEME_VERSION', 1.001);
 // -----------------------------------------------------------------------------
 // Configuração Inicial do Tema
 // -----------------------------------------------------------------------------
-function verdagua_theme_setup()
+function joaosanches_theme_setup()
 {
     // Esconde a barra de admin no frontend
     add_filter('show_admin_bar', '__return_false');
@@ -25,8 +25,8 @@ function verdagua_theme_setup()
 
     // Registar Menus de Navegação
     register_nav_menus(array(
-        'primary' => __('Menu Principal', 'verdagua'),
-        'footer' => __('Menu do Rodapé', 'verdagua'),
+        'primary' => __('Menu Principal', 'joaosanches'),
+        'footer' => __('Menu do Rodapé', 'joaosanches'),
     ));
 
     // Define a largura do conteúdo
@@ -34,7 +34,7 @@ function verdagua_theme_setup()
         $content_width = 900;
     }
 }
-add_action('after_setup_theme', 'verdagua_theme_setup');
+add_action('after_setup_theme', 'joaosanches_theme_setup');
 
 
 // -----------------------------------------------------------------------------
@@ -44,7 +44,7 @@ add_action('after_setup_theme', 'verdagua_theme_setup');
  * CORREÇÃO: Regista a Página de Opções do ACF na ação correta ('acf/init')
  * para resolver o aviso 'load_textdomain_just_in_time'.
  */
-function verdagua_acf_init()
+function joaosanches_acf_init()
 {
     if (function_exists('acf_add_options_sub_page')) {
         acf_add_options_sub_page(array(
@@ -53,13 +53,13 @@ function verdagua_acf_init()
         ));
     }
 }
-add_action('acf/init', 'verdagua_acf_init');
+add_action('acf/init', 'joaosanches_acf_init');
 
 
 // -----------------------------------------------------------------------------
 // Registar Scripts e Estilos (CSS/JS)
 // -----------------------------------------------------------------------------
-function verdagua_enqueue_assets()
+function joaosanches_enqueue_assets()
 {
     // Adicionar Google Fonts
     wp_enqueue_style('google-fonts-outfit', 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap', array(), null);
@@ -82,7 +82,7 @@ function verdagua_enqueue_assets()
     // Font Awesome Kit
     wp_enqueue_script('font-awesome-kit', 'https://kit.fontawesome.com/2e0e2e0ad7.js', [], null, true);
 }
-add_action('wp_enqueue_scripts', 'verdagua_enqueue_assets');
+add_action('wp_enqueue_scripts', 'joaosanches_enqueue_assets');
 
 
 // -----------------------------------------------------------------------------
@@ -239,7 +239,7 @@ function get_news()
             <?php
         endwhile;
     else:
-        echo __("Não há histórias para apresentar", "verdagua");
+        echo __("Não há histórias para apresentar", "joaosanches");
     endif;
     wp_reset_postdata();
     wp_die();

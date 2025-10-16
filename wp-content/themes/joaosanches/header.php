@@ -4,9 +4,9 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>" />
   <meta name="viewport" content="width=device-width" />
-  <meta name="author" content="Lavva Digital Agency" />
-  <meta name="developer" content="Lavva Digital Agency" />
-  <meta name="author_website" content="https://www.lavva.pt" />
+  <meta name="author" content="joaosanches Digital Agency" />
+  <meta name="developer" content="joaosanches Digital Agency" />
+  <meta name="author_website" content="https://www.joaosanches.pt" />
 
   <title>
     <?php if (is_front_page()) {
@@ -90,7 +90,7 @@
             <div class="lg:hidden">
               <button type="button" id="toggle-menu"
                 class="p-2 rounded-md inline-flex items-center justify-center text-green-01">
-                <span class="sr-only"><?php _e("Abrir Menu", "verdagua"); ?></span>
+                <span class="sr-only"><?php _e("Abrir Menu", "joaosanches"); ?></span>
                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
