@@ -1,0 +1,31 @@
+# Manter wp-content
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup-db/
+
+
+# Ignora configs
+.htaccess
+wp-config.php
+.editorconfig
+
+# Ignora logs e IDEs
+*.log
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignora dependências node, se usar
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+
+# Ignora backups
+*.zip
+**/*.zip
+
+# Custom
+gulpfile.js
+
