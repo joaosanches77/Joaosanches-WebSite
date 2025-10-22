@@ -21,7 +21,7 @@ $items_areas = get_field('items_areas');
                 </p>
                 <div class="mt-8 flex items-center gap-4 w-auto">
                     <button
-                        class="areas-carousel-prev-btn p-2 rounded-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition">
+                        class="areas-carousel-prev-btn p-2 rounded-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition">
                         <span class="sr-only"><?php _e("Anterior", "joaosanches"); ?></span>
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">
@@ -30,7 +30,7 @@ $items_areas = get_field('items_areas');
                         </svg>
                     </button>
                     <button
-                        class="areas-carousel-next-btn p-2 rounded-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition">
+                        class="areas-carousel-next-btn p-2 rounded-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition">
                         <span class="sr-only"><?php _e("Seguinte", "joaosanches"); ?></span>
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">
@@ -44,8 +44,10 @@ $items_areas = get_field('items_areas');
             <div class="3xl:col-span-2">
                 <?php if ($items_areas): ?>
                     <div class="owl-carousel areas-carousel owl-theme">
-                        <?php $i=0; foreach ($items_areas as $item): ?>
-                            <div class="item h-full wow animate__animated animate__fadeInRight" data-wow-delay=".<?= 3 + $i++; ?>s">
+                        <?php $i = 0;
+                        foreach ($items_areas as $item): ?>
+                            <div class="item h-full wow animate__animated animate__fadeInRight"
+                                data-wow-delay=".<?= 3 + $i++; ?>s">
                                 <div class="bg-white rounded-3xl p-6 h-full flex flex-col">
                                     <div>
                                         <h3 class="text-24px font-medium text-green-01">
@@ -62,7 +64,7 @@ $items_areas = get_field('items_areas');
                                         echo 'invisible'; ?>">
                                         <a download href="<?php echo esc_url($item['button']['url'] ?? '#'); ?>"
                                             target="<?php echo esc_attr($item['button']['target'] ?? '_self'); ?>"
-                                            class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium rounded-full text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition">
+                                            class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium rounded-full text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition">
                                             <span><?php echo esc_html($item['button']['title'] ?? 'Download'); ?></span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                                 fill="none">

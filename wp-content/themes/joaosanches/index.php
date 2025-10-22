@@ -99,7 +99,7 @@ $needLoadMore = $wp_query->max_num_pages > 1;
 							</div>
 
 							<a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" <?php echo $link_rel; ?>
-								class="inline-flex self-start w-auto items-center justify-center gap-3 px-6 py-4 mt-6 border-2 border-green-04 rounded-full text-16px font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+								class="inline-flex self-start w-auto items-center justify-center gap-3 px-6 py-4 mt-6 border-2 border-green-04 rounded-full text-16px font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
 								<span>Ler mais</span>
 								<svg class="w-5 h-5 -rotate-45" xmlns="http://www.w3.org/2000/svg" fill="none"
 									viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -199,7 +199,7 @@ $needLoadMore = $wp_query->max_num_pages > 1;
 					?>
 					<a href="<?php echo esc_url($button_link['url']); ?>"
 						target="<?php echo esc_attr($button_link['target']); ?>"
-						class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+						class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
 						<span><?php echo esc_html($button_link['title']); ?></span>
 						<svg class="w-5 h-5 -rotate-45" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 							stroke-width="1.5" stroke="currentColor">
@@ -210,7 +210,7 @@ $needLoadMore = $wp_query->max_num_pages > 1;
 				elseif ($button_type == 'download' && $button_download):
 					?>
 					<a download href="<?php echo esc_url($button_download['url']); ?>" download
-						class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+						class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
 						<span><?php echo esc_url($button_download['title']); ?></span>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 							<path

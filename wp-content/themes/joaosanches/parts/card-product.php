@@ -21,7 +21,7 @@ if ($regular_price && $sale_price) {
             <?php endif; ?>
 
             <a href="<?php the_permalink(); ?>"
-                class="text-16px text-green-03 hover:text-green-03/70 flex items-center gap-1 lv-transition">
+                class="text-16px text-green-03 hover:text-green-03/70 flex items-center gap-1 js-transition">
                 <?php _e("Saber mais", "joaosanches"); ?>
                 <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor">
@@ -64,7 +64,7 @@ if ($regular_price && $sale_price) {
 
     <div class="mt-6 pt-5 border-t border-beje-01 flex justify-between items-center">
         <a href="<?php the_permalink(); ?>"
-            class="inline-flex items-center gap-3 px-6 py-4 bg-green-01 text-white text-sm font-semibold rounded-full hover:bg-green-03 lv-transition">
+            class="inline-flex items-center gap-3 px-6 py-4 bg-green-01 text-white text-sm font-semibold rounded-full hover:bg-green-03 js-transition">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                     d="M4 7H22L20.3216 15.3922C20.1346 16.3271 19.3138 17 18.3604 17H7.63961C6.68625 17 5.86542 16.3271 5.67845 15.3922L4 7ZM4 7L3.18937 3.75746C3.07807 3.3123 2.67809 3 2.21922 3H1M18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 20.4477 16.4477 20 17 20C17.5523 20 18 20.4477 18 21ZM10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21Z"

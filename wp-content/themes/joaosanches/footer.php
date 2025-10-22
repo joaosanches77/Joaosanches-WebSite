@@ -75,7 +75,7 @@ $social = function_exists('get_field') ? get_field("social", "options") : null;
                 <?php foreach ($social as $item): ?>
                   <?php if (!empty($item['platform']['url']) && !empty($item['platform']['title'])): ?>
                     <a href="<?= esc_url($item['platform']['url']) ?>" target="_blank" rel="noopener noreferrer"
-                      class="hover:text-green-03 lv-transition" aria-label="<?= esc_attr($item['platform']['title']) ?>">
+                      class="hover:text-green-03 js-transition" aria-label="<?= esc_attr($item['platform']['title']) ?>">
                       <?= $item['platform']['title'] ?>
                     </a>
                   <?php endif; ?>
@@ -89,10 +89,10 @@ $social = function_exists('get_field') ? get_field("social", "options") : null;
             <?php _e("Contactos", "joaosanches"); ?>
           </p>
           <div class="mt-4 space-y-2 text-green-01 font-medium">
-            <p><a href="tel:+351232094476" class="hover:text-green-03 lv-transition"> <?= $contacts["phone"] ?></a>
+            <p><a href="tel:+351232094476" class="hover:text-green-03 js-transition"> <?= $contacts["phone"] ?></a>
             </p>
             <p><a href="mailto:info@joaosanches.pt"
-                class="hover:text-green-03 lv-transition"><?= $contacts["email"] ?></a>
+                class="hover:text-green-03 js-transition"><?= $contacts["email"] ?></a>
             </p>
           </div>
         </div>
@@ -113,12 +113,12 @@ $social = function_exists('get_field') ? get_field("social", "options") : null;
           <?php foreach ($pages_bottom as $page): ?>
             <?php if (!empty($page['page']['url']) && !empty($page['page']['title'])): ?>
               <a href="<?= esc_url($page['page']['url']) ?>"
-                class="hover:text-green-01 lv-transition"><?= esc_html($page['page']['title']) ?></a>
+                class="hover:text-green-01 js-transition"><?= esc_html($page['page']['title']) ?></a>
             <?php endif; ?>
           <?php endforeach; ?>
         <?php endif; ?>
       </div>
-      <div class="flex justify-center text-green-01 lv-transition hover:text-grey-02">
+      <div class="flex justify-center text-green-01 js-transition hover:text-grey-02">
         <a href="https://www.joaosanches.pt/" target="_blank" rel="noopener noreferrer"
           aria-label="link to author - joaosanches">
           <svg class='h-5' viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">

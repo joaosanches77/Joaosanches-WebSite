@@ -31,7 +31,7 @@ $file = get_field('file_card');
 
 
                     <a download href="<?php echo esc_url($button_download['url']); ?>" download
-                        class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+                        class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
                         <span><?php _e("Download Brochure", "joaosanches"); ?></span> <svg
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path

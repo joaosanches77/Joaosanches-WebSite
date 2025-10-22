@@ -91,7 +91,7 @@ if (have_posts()):
                 <div class="flex items-center gap-4">
                   <a href="<?php echo esc_url($product_url_data['url']); ?>"
                     target="<?php echo esc_attr($product_url_data['target']); ?>"
-                    class="inline-flex items-center gap-3 px-6 py-4 bg-green-01 text-white text-sm font-semibold rounded-full hover:bg-green-03 lv-transition">
+                    class="inline-flex items-center gap-3 px-6 py-4 bg-green-01 text-white text-sm font-semibold rounded-full hover:bg-green-03 js-transition">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path
                         d="M4 7H22L20.3216 15.3922C20.1346 16.3271 19.3138 17 18.3604 17H7.63961C6.68625 17 5.86542 16.3271 5.67845 15.3922L4 7ZM4 7L3.18937 3.75746C3.07807 3.3123 2.67809 3 2.21922 3H1M18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 20.4477 16.4477 20 17 20C17.5523 20 18 20.4477 18 21ZM10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21Z"
@@ -191,7 +191,7 @@ if (have_posts()):
           <div
             class="mt-6 flex-shrink-0 flex flex-col sm:flex-row gap-8 sm:gap-4 md:gap-0 items-center sm:space-x-4 lg:mt-0">
             <a href="<?= $product_page_url ?>"
-              class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px rounded-full text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition font-medium">
+              class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px rounded-full text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition font-medium">
               <?php _e("Explorar toda a gama", "joaosanches"); ?>
               <svg class="w-5 h-5 -rotate-45" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke-width="1.5" stroke="currentColor">
@@ -200,7 +200,7 @@ if (have_posts()):
             </a>
             <div class="flex items-center space-x-2">
               <button
-                class="carousel-prev-btn p-2 rounded-full w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition">
+                class="carousel-prev-btn p-2 rounded-full w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition">
                 <span class="sr-only"><?php _e("Anterior", "joaosanches"); ?></span>
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor">
@@ -208,7 +208,7 @@ if (have_posts()):
                 </svg>
               </button>
               <button
-                class="carousel-next-btn p-2 rounded-full w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition">
+                class="carousel-next-btn p-2 rounded-full w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition">
                 <span class="sr-only"><?php _e("Seguinte", "joaosanches"); ?></span>
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor">
@@ -260,7 +260,7 @@ if (have_posts()):
                     <?php endif; ?>
 
                     <a href="<?php the_permalink(); ?>"
-                      class="text-16px text-green-03 hover:text-green-03/70 flex items-center gap-1 lv-transition">
+                      class="text-16px text-green-03 hover:text-green-03/70 flex items-center gap-1 js-transition">
                       <?php _e("Saber Mais", "joaosanches"); ?>
                       <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor">
@@ -306,7 +306,7 @@ if (have_posts()):
                     <div class="flex-grow"></div>
                     <div class="mt-6 flex justify-between items-center">
                       <a href="<?= $product_url["url"] ?>"
-                        class="inline-flex items-center gap-3 px-6 py-4 bg-green-01 text-white text-sm font-semibold rounded-full hover:bg-green-03 lv-transition">
+                        class="inline-flex items-center gap-3 px-6 py-4 bg-green-01 text-white text-sm font-semibold rounded-full hover:bg-green-03 js-transition">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                           <path
                             d="M4 7H22L20.3216 15.3922C20.1346 16.3271 19.3138 17 18.3604 17H7.63961C6.68625 17 5.86542 16.3271 5.67845 15.3922L4 7ZM4 7L3.18937 3.75746C3.07807 3.3123 2.67809 3 2.21922 3H1M18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 20.4477 16.4477 20 17 20C17.5523 20 18 20.4477 18 21ZM10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21Z"

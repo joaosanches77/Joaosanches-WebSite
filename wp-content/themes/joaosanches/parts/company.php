@@ -25,7 +25,7 @@ $items = get_field('items_company');
                     <?php if ($button && isset($button['url']) && !empty($button['url'])): ?>
                         <div>
                             <a download href="<?= $button['url'] ?>"
-                                class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium rounded-full text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition">
+                                class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium rounded-full text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition">
                                 <span><?= $button["title"] ?></span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none">

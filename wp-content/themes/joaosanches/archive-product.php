@@ -32,14 +32,15 @@ $product_categories = get_terms(array(
     <?php if (!empty($product_categories) && !is_wp_error($product_categories)): ?>
       <div class="flex items-center justify-center flex-wrap gap-4 mb-12 mt-10">
         <button
-          class="filter-btn is-active px-6 py-3 rounded-full text-base font-medium bg-green-04 text-white lv-transition border border-green-04 hover:bg-green-04 hover:text-white wow animate__animated animate__fadeInRight" data-wow-delay=".3s"
-          data-filter="*">
+          class="filter-btn is-active px-6 py-3 rounded-full text-base font-medium bg-green-04 text-white js-transition border border-green-04 hover:bg-green-04 hover:text-white wow animate__animated animate__fadeInRight"
+          data-wow-delay=".3s" data-filter="*">
           <?php _e("Todos", "joaosanches"); ?>
         </button>
-        <?php $i=0; foreach ($product_categories as $category): ?>
+        <?php $i = 0;
+        foreach ($product_categories as $category): ?>
           <button
-            class="filter-btn px-6 py-3 rounded-full text-base font-medium border border-green-04 text-green-01 hover:bg-green-04 hover:text-white lv-transition wow animate__animated animate__fadeInRight" data-wow-delay=".<?= 3 + $i++;?>s"
-            data-filter="<?php echo $category->slug; ?>">
+            class="filter-btn px-6 py-3 rounded-full text-base font-medium border border-green-04 text-green-01 hover:bg-green-04 hover:text-white js-transition wow animate__animated animate__fadeInRight"
+            data-wow-delay=".<?= 3 + $i++; ?>s" data-filter="<?php echo $category->slug; ?>">
             <?php echo esc_html($category->name); ?>
           </button>
         <?php endforeach; ?>
@@ -47,18 +48,17 @@ $product_categories = get_terms(array(
     <?php endif; ?>
 
 
-    <div id="product-grid"
-      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+    <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
       <?php
       if (have_posts()):
-        $i=0;
+        $i = 0;
         while (have_posts()):
           the_post();
           ?>
-            <div class="wow animate__animated animate__fadeInUp" data-wow-delay=".<?= 3+$i++; ?>s">
-              <?php get_template_part('parts/card-product'); ?>
-            </div>
+          <div class="wow animate__animated animate__fadeInUp" data-wow-delay=".<?= 3 + $i++; ?>s">
+            <?php get_template_part('parts/card-product'); ?>
+          </div>
           <?php
         endwhile;
       else:

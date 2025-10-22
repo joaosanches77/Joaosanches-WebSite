@@ -31,7 +31,7 @@ $badges_link = get_field("badges_link_hero");
                                 <div class="mt-4 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div class="">
                                         <a href="<?= esc_url($slide['button']['url']) ?>"
-                                            class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium rounded-full text-green-01 bg-green-04/10 sm:hover:bg-green-04/30 lv-transition">
+                                            class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium rounded-full text-green-01 bg-green-04/10 sm:hover:bg-green-04/30 js-transition">
                                             <span><?= esc_html($slide['button']["title"]) ?></span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                                 fill="none">

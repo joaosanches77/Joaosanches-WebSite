@@ -21,7 +21,7 @@ nav ul {
 }
 
 nav ul li {
-  @apply  font-medium text-green-01 hover:text-green-04 lv-transition text-16px 3xl:text-20px;
+  @apply  font-medium text-green-01 hover:text-green-04 js-transition text-16px 3xl:text-20px;
 }
 
 #footer-menu {
@@ -29,11 +29,11 @@ nav ul li {
 }
 
 #footer-menu li a {
-    @apply font-medium text-green-01 hover:text-green-03 lv-transition;
+    @apply font-medium text-green-01 hover:text-green-03 js-transition;
 }
 
 
-.lv-transition{
+.js-transition{
   @apply transition-all duration-200 ease-linear;
 }
 .flex-center {
@@ -71,7 +71,7 @@ nav ul li {
 /* Carrousels */
 
 .hero-carousel-dots .hero-dot {
-  @apply lv-transition;
+  @apply js-transition;
   border: none;
   outline: none;
   cursor: pointer;
@@ -98,7 +98,7 @@ nav ul li {
 
 
 .block-2-carousel-dots .block-2-dot {
-  @apply lv-transition;
+  @apply js-transition;
   border: none;
   outline: none;
   cursor: pointer;
@@ -123,7 +123,7 @@ nav ul li {
 
 
 .areas-carousel-dots .owl-dot {
-    @apply w-2 h-2 rounded-full bg-grey-01 lv-transition;
+    @apply w-2 h-2 rounded-full bg-grey-01 js-transition;
 }
 
 .areas-carousel-dots .owl-dot.active {
@@ -140,7 +140,7 @@ nav ul li {
 }
 
 .product-gallery-carousel .owl-dot {
-    @apply w-2.5 h-2.5 rounded-full bg-grey-01 lv-transition mx-1;
+    @apply w-2.5 h-2.5 rounded-full bg-grey-01 js-transition mx-1;
 }
 
 .product-gallery-carousel .owl-dot.active {
@@ -258,17 +258,17 @@ nav ul li {
 
 /* O contentor <nav> principal. */
 #main-nav {
-    @apply relative lv-transition;
+    @apply relative js-transition;
 }
 
 /* A barra de menu visível. */
 #menu {
-    @apply relative z-50 rounded-full bg-white  lv-transition;
+    @apply relative z-50 rounded-full bg-white  js-transition;
 }
 
 /* O painel do menu mobile.*/
 #mobile-menu {
-    @apply absolute top-0 left-0 right-0 z-10 pt-24 pb-16 px-8 opacity-0 max-h-0 overflow-hidden lv-transition bg-white pointer-events-none;
+    @apply absolute top-0 left-0 right-0 z-10 pt-24 pb-16 px-8 opacity-0 max-h-0 overflow-hidden js-transition bg-white pointer-events-none;
 }
 
 #mobile-menu ul {
@@ -296,11 +296,11 @@ nav ul li {
 /* Inputs do formulário de contacto */
 
 .inputs-form{
-  @apply w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none lv-transition;
+  @apply w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none js-transition;
 }
 
 .button-form{
-  @apply w-full inline-flex items-center justify-center gap-3 px-8 py-4 mt-4 border border-transparent rounded-full shadow-sm text-16px font-medium text-green-01 bg-green-04/20 hover:bg-green-04/40 lv-transition;
+  @apply w-full inline-flex items-center justify-center gap-3 px-8 py-4 mt-4 border border-transparent rounded-full shadow-sm text-16px font-medium text-green-01 bg-green-04/20 hover:bg-green-04/40 js-transition;
 }
 
 .select-input{
@@ -308,7 +308,7 @@ nav ul li {
 }
 
 .input-textarea{
-  @apply w-full bg-transparent border border-grey-01 rounded-3xl px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none lv-transition;
+  @apply w-full bg-transparent border border-grey-01 rounded-3xl px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none js-transition;
 }
 .input-terms{
   @apply text-12px text-grey-02 my-10;
@@ -322,19 +322,19 @@ nav ul li {
 }
 
 #cookiescript_buttons #cookiescript_accept {
-   @apply bg-green-04 lv-transition rounded-3xl;
+   @apply bg-green-04 js-transition rounded-3xl;
 }
 
 #cookiescript_buttons #cookiescript_accept:hover {
-  @apply bg-green-03 lv-transition;
+  @apply bg-green-03 js-transition;
 }
 
 #cookiescript_buttons #cookiescript_reject {
-  @apply  lv-transition rounded-3xl;
+  @apply  js-transition rounded-3xl;
 }
 
 #cookiescript_buttons #cookiescript_reject:hover {
-  @apply bg-grey-02 lv-transition;
+  @apply bg-grey-02 js-transition;
 }
 
 #cookiescript_injected {
@@ -342,7 +342,7 @@ nav ul li {
 }
 
 #cookiescript_description #cookiescript_readmore{
-  @apply text-green-04 hover:text-green-03 lv-transition;
+  @apply text-green-04 hover:text-green-03 js-transition;
 }
 
 /*************************** 

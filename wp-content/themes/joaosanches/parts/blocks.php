@@ -31,7 +31,7 @@ $block_4 = get_field('block_4');
                     </div>
                     <?php if ($block_1['button']): ?>
                         <a download href="<?= $block_1['button']['url'] ?>"
-                            class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+                            class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
                             <span><?php echo esc_html($block_1['button']['title']); ?></span><svg
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 stroke="currentColor" fill="none">
@@ -84,13 +84,13 @@ $block_4 = get_field('block_4');
                                     <?php if ($item && isset($item['button_read_more']) && !empty($item['button_read_more'])): ?>
                                         <a href="<?php echo esc_url($item['button_read_more']['url']); ?>"
                                             target="<?php echo esc_attr($item['button_read_more']['target']); ?>"
-                                            class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+                                            class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
                                             <span><?php echo esc_html($item['button_read_more']['title']); ?></span>
                                         </a>
                                     <?php endif; ?>
                                     <?php if ($item && isset($item['button_download']['url']) && !empty($item['button_download']['url'])): ?>
                                         <a download href="<?php echo esc_url($item['button_download']['url']); ?>" target="_blank"
-                                            class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+                                            class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
                                             <span><?php echo esc_html($item['button_download']['title']); ?></span>
                                         </a>
                                     <?php endif; ?>
@@ -127,7 +127,7 @@ $block_4 = get_field('block_4');
                 <?php if (!empty($block_3["button"])): ?>
                     <div class="relative z-10">
                         <a href="<?= esc_url($block_3["button"]["url"]) ?>"
-                            class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+                            class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
                             <span><?= esc_html($block_3["button"]["title"]) ?></span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentColor"
                                 viewBox="0 0 24" fill="none">

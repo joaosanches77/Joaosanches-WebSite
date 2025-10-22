@@ -37,13 +37,13 @@ $email = get_field('email');
                         <div class="mt-4 space-y-2">
                             <p>
                                 <a href="tel:<?php echo esc_attr(str_replace(' ', '', $phone)); ?>"
-                                    class="text-32px font-medium text-green-01 hover:text-green-03 lv-transition">
+                                    class="text-32px font-medium text-green-01 hover:text-green-03 js-transition">
                                     <?php echo esc_html($phone); ?>
                                 </a>
                             </p>
                             <p>
                                 <a href="mailto:<?php echo esc_attr($email); ?>"
-                                    class="text-32px font-medium text-green-01 hover:text-green-03 lv-transition">
+                                    class="text-32px font-medium text-green-01 hover:text-green-03 js-transition">
                                     <?php echo esc_html($email); ?>
                                 </a>
                             </p>
@@ -73,24 +73,24 @@ get_footer();
                             <div>
                                 <label for="first-name" class="sr-only">Primeiro Nome</label>
                                 <input type="text" name="first-name" id="first-name" placeholder="Primeiro Nome"
-                                    class="w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none lv-transition">
+                                    class="w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none js-transition">
                             </div>
                             <div>
                                 <label for="last-name" class="sr-only">Último Nome</label>
                                 <input type="text" name="last-name" id="last-name" placeholder="Último Nome"
-                                    class="w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none lv-transition">
+                                    class="w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none js-transition">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label for="phone" class="sr-only">Telefone</label>
                                 <input type="tel" name="phone" id="phone" placeholder="Telefone"
-                                    class="w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none lv-transition">
+                                    class="w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none js-transition">
                             </div>
                             <div>
                                 <label for="email" class="sr-only">Email</label>
                                 <input type="email" name="email" id="email" placeholder="Email" required
-                                    class="w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none lv-transition">
+                                    class="w-full bg-transparent border border-grey-01 rounded-full px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none js-transition">
                             </div>
                         </div>
                         <div
@@ -107,7 +107,7 @@ get_footer();
                         <div>
                             <label for="message" class="sr-only">Mensagem</label>
                             <textarea name="message" id="message" rows="3" placeholder="Mensagem"
-                                class="w-full bg-transparent border border-grey-01 rounded-3xl px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none lv-transition"></textarea>
+                                class="w-full bg-transparent border border-grey-01 rounded-3xl px-6 py-4 text-green-01 placeholder:text-grey-02 focus:ring-green-04 focus:border-green-04 outline-none js-transition"></textarea>
                         </div>
                         <div class="flex items-center">
                             <input id="terms" name="terms" type="checkbox"
@@ -119,7 +119,7 @@ get_footer();
                         </div>
                         <div>
                             <button type="submit"
-                                class="w-full inline-flex items-center justify-center gap-3 px-8 py-4 mt-4 border border-transparent rounded-full shadow-sm text-base font-medium text-green-01 bg-green-04/20 hover:bg-green-04/40 lv-transition">
+                                class="w-full inline-flex items-center justify-center gap-3 px-8 py-4 mt-4 border border-transparent rounded-full shadow-sm text-base font-medium text-green-01 bg-green-04/20 hover:bg-green-04/40 js-transition">
                                 Enviar
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none">

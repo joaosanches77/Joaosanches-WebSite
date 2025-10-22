@@ -88,7 +88,7 @@ $button_download = get_field('button_download_highlightblock');
                     ?>
                     <a href="<?php echo esc_url($button_link['url']); ?>"
                         target="<?php echo esc_attr($button_link['target']); ?>"
-                        class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+                        class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
                         <span><?php echo esc_html($button_link['title']); ?></span>
                         <svg class="w-5 h-5 -rotate-45" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">
@@ -99,7 +99,7 @@ $button_download = get_field('button_download_highlightblock');
                 elseif ($button_type == 'download' && $button_download):
                     ?>
                     <a download href="<?php echo esc_url($button_download['url']); ?>" download
-                        class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+                        class="inline-flex w-full md:w-auto items-center justify-center gap-3 px-8 py-6 border-2 border-green-04 rounded-full text-base font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
                         <span>Download Brochure</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path

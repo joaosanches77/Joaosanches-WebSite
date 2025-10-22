@@ -25,7 +25,7 @@ $product_page_url = get_post_type_archive_link('product');
             <div
                 class="mt-6 flex-shrink-0 flex flex-col sm:flex-row gap-8 sm:gap-4 md:gap-0 items-center sm:space-x-4 lg:mt-0 wow animate__animated animate__fadeIn">
                 <a href="<?= $product_page_url ?>"
-                    class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px rounded-full text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition font-medium">
+                    class="w-full flex items-center justify-center gap-3 px-8 py-6 text-16px rounded-full text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition font-medium">
                     <?php _e("Explorar toda a gama", "joaosanches"); ?>
                     <svg class="w-5 h-5 -rotate-45" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor">
@@ -34,7 +34,7 @@ $product_page_url = get_post_type_archive_link('product');
                 </a>
                 <div class="flex items-center space-x-2">
                     <button
-                        class="carousel-prev-btn p-2 rounded-full w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition">
+                        class="carousel-prev-btn p-2 rounded-full w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition">
                         <span class="sr-only"><?php _e("Anterior", "joaosanches"); ?></span>
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">
@@ -43,7 +43,7 @@ $product_page_url = get_post_type_archive_link('product');
                         </svg>
                     </button>
                     <button
-                        class="carousel-next-btn p-2 rounded-full w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 lv-transition">
+                        class="carousel-next-btn p-2 rounded-full w-full flex items-center justify-center gap-3 px-8 py-6 text-16px font-medium text-green-01 bg-green-04/10 hover:bg-green-04/30 js-transition">
                         <span class="sr-only"><?php _e("Seguinte", "joaosanches"); ?></span>
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">
@@ -99,7 +99,7 @@ $product_page_url = get_post_type_archive_link('product');
                                 <?php endif; ?>
 
                                 <a href="<?php the_permalink(); ?>"
-                                    class="text-16px text-green-03 hover:text-green-03/70 flex items-center gap-1 lv-transition">
+                                    class="text-16px text-green-03 hover:text-green-03/70 flex items-center gap-1 js-transition">
                                     <?php _e("Saber Mais", "joaosanches"); ?>
                                     <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="2" stroke="currentColor">
@@ -145,7 +145,7 @@ $product_page_url = get_post_type_archive_link('product');
                                 <div class="flex-grow"></div>
                                 <div class="mt-6 flex justify-between items-center">
                                     <a href="<?php the_permalink(); ?>"
-                                        class="inline-flex items-center gap-3 px-6 py-4 bg-green-01 text-white text-sm font-semibold rounded-full hover:bg-green-03 lv-transition">
+                                        class="inline-flex items-center gap-3 px-6 py-4 bg-green-01 text-white text-sm font-semibold rounded-full hover:bg-green-03 js-transition">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none">
                                             <path

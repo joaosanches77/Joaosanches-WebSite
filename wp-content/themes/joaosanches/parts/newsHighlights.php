@@ -46,7 +46,7 @@ $news_query = new WP_Query($args);
                                     </div>
 
                                     <a href="<?php the_permalink(); ?>"
-                                        class="inline-flex self-start w-auto items-center justify-center gap-3 px-6 py-4 mt-6 border-2 border-green-04 rounded-full text-16px font-medium text-green-04 hover:bg-green-04 hover:text-white lv-transition">
+                                        class="inline-flex self-start w-auto items-center justify-center gap-3 px-6 py-4 mt-6 border-2 border-green-04 rounded-full text-16px font-medium text-green-04 hover:bg-green-04 hover:text-white js-transition">
                                         <span><?php _e("Ler mais", "joaosanches"); ?></span>
                                         <svg class="w-5 h-5 -rotate-45" xmlns="http://www.w3.org/2000/svg" fill="none"
                                             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
