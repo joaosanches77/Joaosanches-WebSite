@@ -1,5 +1,5 @@
 /*! Theme Script
- * https://joaosanches.agency/ */
+ * https://joaosanches.pt/ */
 jQuery(document).ready(function ($) {
   console.log("=== VERSION 001 ===");
 
