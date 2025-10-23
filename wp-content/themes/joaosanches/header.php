@@ -23,14 +23,6 @@
 
   <?php wp_head(); ?>
 
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', '');</script>
 
   <script src="<?= get_template_directory_uri() . "/dist/script/lib/owl.carousel.min.js" ?>"></script>
 
@@ -38,14 +30,15 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header class="fixed top-10 z-20 w-full main-container inset-x-0">
+  <header class="fixed top-0 z-20 w-full main-container inset-x-0">
     <nav id="main-nav"
-      class=" lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative main-container shadow-lg rounded-full bg-white z-30"
+      class=" relative main-container bg-black z-30"
       aria-label="Top">
       <div id="menu" class="w-full py-6 flex items-center justify-between ">
         <div class="flex items-center">
           <a href="<?php echo home_url(); ?>">
-            <div class="w-24 h-10 bg-black"></div>
+            <div class="w-24 h-10 bg-black relative"> <img class=" w-full h-full object-contain"
+                src="<?php echo get_template_directory_uri(); ?>/assets/img/js.png"></div>
           </a>
         </div>
         <div class="flex items-center gap-8">

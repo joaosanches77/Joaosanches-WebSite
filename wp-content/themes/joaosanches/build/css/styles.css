@@ -5,7 +5,7 @@
 
 html,
 body {
-  @apply p-0 m-0 font-outfit font-normal min-h-screen overflow-x-hidden;
+  @apply p-0 m-0 font-outfit font-normal min-h-screen overflow-x-hidden text-white;
 }
 
 .padding-nav {
@@ -21,7 +21,7 @@ nav ul {
 }
 
 nav ul li {
-  @apply  font-medium text-green-01 hover:text-green-04 js-transition text-16px 3xl:text-20px;
+  @apply  font-medium text-white hover:text-orange-600 js-transition text-16px 3xl:text-20px;
 }
 
 #footer-menu {
@@ -29,7 +29,7 @@ nav ul li {
 }
 
 #footer-menu li a {
-    @apply font-medium text-green-01 hover:text-green-03 js-transition;
+    @apply font-medium text-white  js-transition;
 }
 
 
@@ -249,7 +249,7 @@ nav ul li {
 #main-menu-mobile .current-menu-item > a,
 #main-menu-mobile .current-menu-parent > a,
 #main-menu-mobile .current-menu-ancestor > a {
-    @apply text-green-03; 
+    @apply text-white; 
 }
 
 
@@ -263,7 +263,7 @@ nav ul li {
 
 /* A barra de menu visível. */
 #menu {
-    @apply relative z-50 rounded-full bg-white  js-transition;
+    @apply relative z-50 text-white js-transition;
 }
 
 /* O painel do menu mobile.*/
@@ -272,7 +272,7 @@ nav ul li {
 }
 
 #mobile-menu ul {
-    @apply flex flex-col gap-4 lg:bg-white;
+    @apply flex flex-col gap-4 text-white ;
 }
 
 

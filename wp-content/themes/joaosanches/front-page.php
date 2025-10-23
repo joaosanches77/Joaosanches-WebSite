@@ -3,26 +3,23 @@ get_header();
 ?>
 
 <?php
-
 // HERO
-echo get_template_part("parts/hero");
+get_template_part("parts/hero");
 
 // Products Highlights
-echo get_template_part("parts/productsHighlights");
+get_template_part("parts/productsHighlights");
 
 // BLOCKS
-echo get_template_part("parts/blocks");
+get_template_part("parts/blocks");
 
 // Company
-echo get_template_part("parts/company");
+get_template_part("parts/company");
 
 // Block Highlight
-echo get_template_part("parts/blockhighlight");
+get_template_part("parts/blockhighlight");
 
 // News Highlights
-echo get_template_part("parts/newsHighlights");
-
-
+get_template_part("parts/newsHighlights");
 ?>
 
 
