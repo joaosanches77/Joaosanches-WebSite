@@ -62,7 +62,7 @@ add_action('acf/init', 'joaosanches_acf_init');
 function joaosanches_enqueue_assets()
 {
     // Adicionar Google Fonts
-    wp_enqueue_style('google-fonts-outfit', 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap', array(), null);
+    wp_enqueue_style('google-fonts-Montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', array(), null);
 
     // Estilos CSS do Tema e bibliotecas
     wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/assets/owl.carousel.min.css', array(), THEME_VERSION);

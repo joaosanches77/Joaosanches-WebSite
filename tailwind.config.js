@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        outfit: ["Outfit", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       fontSize: {
         "80px": ["80px", 1.1],
@@ -24,19 +24,11 @@ module.exports = {
         "12px": ["12px", 1.3],
       },
       colors: {
-        green: {
-          "01": "#001A17",
-          "02": "#00332E",
-          "03": "#008375",
-          "04": "#00C4B3",
-        },
+        orange: "#FA4F00",
+        blue: "#006FFF",
         grey: {
-          "01": "#B0C4C2",
-          "02": "#73807E",
-        },
-        beje: {
-          "01": "#EDEBE4",
-          "02": "#FAF8F0",
+          light: "#7C7C7C",
+          dark: "#464646",
         },
       },
       spacing: {},
