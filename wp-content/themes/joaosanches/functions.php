@@ -90,48 +90,48 @@ add_action('wp_enqueue_scripts', 'joaosanches_enqueue_assets');
 // -----------------------------------------------------------------------------
 
 /**
- * Regista o Custom Post Type 'product'.
+ * Regista o Custom Post Type 'work'.
  */
-function register_product_post_type()
+function register_work_post_type()
 {
     $labels = array(
-        'name' => _x('Produtos', 'Post Type General Name', 'product'),
-        'singular_name' => _x('Produto', 'Post Type Singular Name', 'product'),
-        'menu_name' => __('Produtos', 'product'),
-        'name_admin_bar' => __('Adicionar Novo Produto', 'product'),
-        'archives' => __('Arquivo de Produtos', 'product'),
-        'parent_item_colon' => __('Produto Pai:', 'product'),
-        'all_items' => __('Todos os Produtos', 'product'),
-        'add_new_item' => __('Adicionar Novo Produto', 'product'),
-        'add_new' => __('Adicionar Novo', 'product'),
-        'new_item' => __('Novo Produto', 'product'),
-        'edit_item' => __('Editar Produto', 'product'),
-        'update_item' => __('Atualizar Produto', 'product'),
-        'view_item' => __('Ver Produto', 'product'),
-        'search_items' => __('Procurar Produto', 'product'),
-        'not_found' => __('Não Encontrado', 'product'),
-        'not_found_in_trash' => __('Não Encontrado no Lixo', 'product'),
-        'featured_image' => __('Imagem de Destaque', 'product'),
-        'set_featured_image' => __('Definir Imagem de Destaque', 'product'),
-        'remove_featured_image' => __('Remover Imagem de Destaque', 'product'),
-        'use_featured_image' => __('Usar como Imagem de Destaque', 'product'),
-        'insert_into_item' => __('Inserir no Produto', 'product'),
-        'uploaded_to_this_item' => __('Carregado para este Produto', 'product'),
-        'items_list' => __('Lista de Produtos', 'product'),
-        'items_list_navigation' => __('Navegação da Lista de Produtos', 'product'),
-        'filter_items_list' => __('Filtrar Lista de Produtos', 'product'),
+        'name' => _x('Trabalhos', 'Post Type General Name', 'work'),
+        'singular_name' => _x('Trabalho', 'Post Type Singular Name', 'work'),
+        'menu_name' => __('Trabalhos', 'work'),
+        'name_admin_bar' => __('Adicionar Novo Trabalho', 'work'),
+        'archives' => __('Arquivo de Trabalhos', 'work'),
+        'parent_item_colon' => __('Trabalho Pai:', 'work'),
+        'all_items' => __('Todos os Trabalhos', 'work'),
+        'add_new_item' => __('Adicionar Novo Trabalho', 'work'),
+        'add_new' => __('Adicionar Novo', 'work'),
+        'new_item' => __('Novo Trabalho', 'work'),
+        'edit_item' => __('Editar Trabalho', 'work'),
+        'update_item' => __('Atualizar Trabalho', 'work'),
+        'view_item' => __('Ver Trabalho', 'work'),
+        'search_items' => __('Procurar Trabalho', 'work'),
+        'not_found' => __('Não Encontrado', 'work'),
+        'not_found_in_trash' => __('Não Encontrado no Lixo', 'work'),
+        'featured_image' => __('Imagem de Destaque', 'work'),
+        'set_featured_image' => __('Definir Imagem de Destaque', 'work'),
+        'remove_featured_image' => __('Remover Imagem de Destaque', 'work'),
+        'use_featured_image' => __('Usar como Imagem de Destaque', 'work'),
+        'insert_into_item' => __('Inserir no Trabalho', 'work'),
+        'uploaded_to_this_item' => __('Carregado para este Trabalho', 'work'),
+        'items_list' => __('Lista de Trabalhos', 'work'),
+        'items_list_navigation' => __('Navegação da Lista de Trabalhos', 'work'),
+        'filter_items_list' => __('Filtrar Lista de Trabalhos', 'work'),
     );
     $args = array(
-        'label' => __('Produto', 'product'),
-        'description' => __('Catálogo de produtos e serviços', 'product'),
+        'label' => __('Trabalho', 'work'),
+        'description' => __('Catálogo de Trabalhos e serviços', 'work'),
         'labels' => $labels,
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes'),
-        'taxonomies' => array('product_category', 'product_tag'),
+        'taxonomies' => array('work_category', 'work_tag'),
         'hierarchical' => false,
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        'menu_icon' => 'dashicons-cart',
+        'menu_icon' => 'dashicons-book',
         'menu_position' => 20,
         'show_in_admin_bar' => true,
         'show_in_nav_menus' => true,
@@ -141,18 +141,18 @@ function register_product_post_type()
         'publicly_queryable' => true,
         'capability_type' => 'post',
     );
-    register_post_type('product', $args);
+    register_post_type('work', $args);
 }
-add_action('init', 'register_product_post_type', 0);
+add_action('init', 'register_work_post_type', 0);
 
 /**
- * Regista as Taxonomias para os Produtos.
+ * Regista as Taxonomias para os Trabalhos.
  */
-function register_product_taxonomies()
+function register_work_taxonomies()
 {
     $category_labels = array(
-        'name' => _x('Categorias de Produtos', 'taxonomy general name', 'textdomain'),
-        'singular_name' => _x('Categoria de Produto', 'taxonomy singular name', 'textdomain'),
+        'name' => _x('Categorias de Trabalhos', 'taxonomy general name', 'textdomain'),
+        'singular_name' => _x('Categoria de Trabalho', 'taxonomy singular name', 'textdomain'),
         'search_items' => __('Procurar Categorias', 'textdomain'),
         'all_items' => __('Todas as Categorias', 'textdomain'),
         'parent_item' => __('Categoria-Pai', 'textdomain'),
@@ -169,13 +169,13 @@ function register_product_taxonomies()
         'show_ui' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array('slug' => 'product-category'),
+        'rewrite' => array('slug' => 'work-category'),
     );
-    register_taxonomy('product_category', array('product'), $category_args);
+    register_taxonomy('work_category', array('work'), $category_args);
 
     $tag_labels = array(
-        'name' => _x('Etiquetas de Produtos', 'taxonomy general name', 'textdomain'),
-        'singular_name' => _x('Etiqueta de Produto', 'taxonomy singular name', 'textdomain'),
+        'name' => _x('Etiquetas de Trabalhos', 'taxonomy general name', 'textdomain'),
+        'singular_name' => _x('Etiqueta de Trabalho', 'taxonomy singular name', 'textdomain'),
         'search_items' => __('Procurar Etiquetas', 'textdomain'),
         'all_items' => __('Todas as Etiquetas', 'textdomain'),
         'edit_item' => __('Editar Etiqueta', 'textdomain'),
@@ -190,11 +190,11 @@ function register_product_taxonomies()
         'show_ui' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array('slug' => 'product-tag'),
+        'rewrite' => array('slug' => 'work-tag'),
     );
-    register_taxonomy('product_tag', array('product'), $tag_args);
+    register_taxonomy('work_tag', array('work'), $tag_args);
 }
-add_action('init', 'register_product_taxonomies', 0);
+add_action('init', 'register_work_taxonomies', 0);
 
 
 // -----------------------------------------------------------------------------
@@ -248,38 +248,38 @@ add_action('wp_ajax_get_news', 'get_news');
 add_action('wp_ajax_nopriv_get_news', 'get_news');
 
 /**
- * AJAX para filtrar produtos por categoria
+ * AJAX para filtrar Trabalhos por categoria
  */
-function filter_products_by_category()
+function filter_works_by_category()
 {
     $category_slug = $_POST['category'];
     $args = array(
-        'post_type' => 'product',
+        'post_type' => 'work',
         'posts_per_page' => -1,
     );
     if ($category_slug != '*') {
         $args['tax_query'] = array(
             array(
-                'taxonomy' => 'product_category',
+                'taxonomy' => 'work_category',
                 'field' => 'slug',
                 'terms' => $category_slug,
             ),
         );
     }
-    $products_query = new WP_Query($args);
-    if ($products_query->have_posts()) {
-        while ($products_query->have_posts()) {
-            $products_query->the_post();
-            get_template_part('parts/card-product');
+    $works_query = new WP_Query($args);
+    if ($works_query->have_posts()) {
+        while ($works_query->have_posts()) {
+            $works_query->the_post();
+            get_template_part('parts/card-work');
         }
     } else {
-        echo '<p class="col-span-full text-center">Nenhum produto encontrado nesta categoria.</p>';
+        echo '<p class="col-span-full text-center">Nenhum Trabalho encontrado nesta categoria.</p>';
     }
     wp_reset_postdata();
     wp_die();
 }
-add_action('wp_ajax_filter_products', 'filter_products_by_category');
-add_action('wp_ajax_nopriv_filter_products', 'filter_products_by_category');
+add_action('wp_ajax_filter_works', 'filter_works_by_category');
+add_action('wp_ajax_nopriv_filter_works', 'filter_works_by_category');
 
 
 // -----------------------------------------------------------------------------
