@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em Breve</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evita barras de scroll desnecessárias */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<section id="hero" style="background-color: black; height: 100vh; position: relative;">
+    
+    <video autoplay muted loop playsinline
+        style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(64px);">
+        
+        <source src="assets/videos/fireballs2.mp4" type="video/mp4">
+    </video>
+    
+    <div class="main-container"
+        style="position: absolute; top: 50%; right: 50%; transform: translate(50%, -50%); z-index: 30; text-align: center;"
+        data-aos="zoom-in" data-aos-delay="100">
+        
+        <h3 style="font-size: 3rem; color: white; margin-bottom: 2rem;">Estou a últimar o meu site</h3>
+        
+        <p style="color: white; font-size: 1.1rem;">
+            Mas podes contactar-me através de 
+            <a style="color: #FA4F00; text-decoration: none;"
+                href="mailto:joao.vp.sanches@gmail.com">joao.vp.sanches@gmail.com</a>
+        </p>
+    </div>
+</section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>
