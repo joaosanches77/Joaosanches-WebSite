@@ -30,13 +30,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header class="fixed top-0 z-20 w-full main-container inset-x-0">
-    <nav id="main-nav" class=" relative main-container  z-30" aria-label="Top">
+  <header class="fixed top-0 w-full inset-x-0 z-50">
+    <nav id="main-nav" class=" relative z-30 main-container" aria-label="Top">
       <div id="menu" class="w-full py-6 flex items-center justify-between ">
         <div class="flex items-center">
           <a href="<?php echo home_url(); ?>">
-            <div class="w-24 h-10  relative"> <img class=" w-full h-full object-contain"
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/js.png"></div>
+            <div class="w-20 h-20  relative"> <img class=" w-full h-full object-contain"
+                src="<?php echo get_template_directory_uri(); ?>/assets/img/jsnew.png"></div>
           </a>
         </div>
         <div class="flex items-center gap-8">

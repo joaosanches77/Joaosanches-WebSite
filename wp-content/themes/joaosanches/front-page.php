@@ -6,20 +6,18 @@ get_header();
 // HERO
 get_template_part("parts/hero");
 
+// About
+get_template_part("parts/about");
+
 // Products Highlights
-get_template_part("parts/productsHighlights");
+get_template_part("parts/worksHighlights");
 
-// BLOCKS
-get_template_part("parts/blocks");
+// Services Highlights
+get_template_part("parts/servicesHighlights");
 
-// Company
-get_template_part("parts/company");
+// Contacts
+get_template_part("parts/contacts");
 
-// Block Highlight
-get_template_part("parts/blockhighlight");
-
-// News Highlights
-get_template_part("parts/newsHighlights");
 ?>
 
 

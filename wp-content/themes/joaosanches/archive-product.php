@@ -1,11 +1,9 @@
 <?php
 get_header();
 
-// Vamos buscar os dados para o cabeçalho desta página de arquivo.
-// A melhor prática é usar uma Página de Opções do ACF.
-// Ex: $title = get_field('product_archive_title', 'option');
-$title = 'Cuide da sua pele naturalmente';
-$description = 'Explore a nossa gama de produtos cosméticos naturais, toda a nossa gama é concebida respeitando o planeta e os seus ciclos.';
+
+$description = 'Aqui podes encontrar alguns dos meus
+melhores trabalhos';
 
 // Vai buscar todas as categorias de produtos para criar os botões de filtro.
 $product_categories = get_terms(array(
@@ -18,11 +16,8 @@ $product_categories = get_terms(array(
   <div class="main-container mx-auto wow animate__animated animate__fadeIn">
 
     <div class="flex flex-col justify-center max-w-2xl text-center mx-auto mb-20">
-      <p class="text-12px font-bold text-green-04 uppercase">
-        <?php _e("Produtos", "joaosanches"); ?>
-      </p>
       <h1 class="mt-4 text-48px lg:text-56px text-green-01">
-        <?php echo esc_html($title); ?>
+        <?php _e("Trabalhos", "joaosanches"); ?>
       </h1>
       <p class="mt-6 text-16px text-grey-02">
         <?php echo esc_html($description); ?>

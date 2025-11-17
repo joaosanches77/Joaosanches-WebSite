@@ -1,9 +1,4 @@
 <?php
-/**
- * Template Name: 002 - Contacts
- */
-
-get_header();
 
 
 $tagline = get_field('tagline');
@@ -13,58 +8,55 @@ $phone = get_field('phone');
 $email = get_field('email');
 ?>
 
-<main>
-    <section class="bg-gradient-to-b from-beje-02 to-white padding-nav-small pb-24 sm:pb-40">
-        <div class="main-container mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-5 ">
+<section class="bg-gradient-to-b from-beje-02 to-white padding-nav-small pb-24 sm:pb-40">
+    <div class="main-container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-5 ">
 
-                <div class="flex flex-col wow animate__animated animate__fadeInLeft">
-                    <div>
-                        <p class="text-12px font-bold text-green-04 uppercase tracking-wider">
-                            <?php echo esc_html($tagline); ?>
+            <div class="flex flex-col wow animate__animated animate__fadeInLeft">
+                <div>
+                    <p class="text-12px font-bold text-green-04 uppercase tracking-wider">
+                        <?php echo esc_html($tagline); ?>
+                    </p>
+                    <h1 class="mt-4 text-48px 3xl:text-56px text-green-01">
+                        <?php echo esc_html($title); ?>
+                    </h1>
+                    <p class="mt-4 text-16px text-grey-02 max-w-lg">
+                        <?php echo esc_html($description); ?>
+                    </p>
+                </div>
+                <div class="lg:mt-12 pt-8">
+                    <p class="text-12px font-bold text-green-04 uppercase tracking-wider">
+                        <?php _e("Informações de Contacto", "joaosanches"); ?>
+                    </p>
+                    <div class="mt-4 space-y-2">
+                        <p>
+                            <a href="tel:<?php echo esc_attr(str_replace(' ', '', $phone)); ?>"
+                                class="text-32px font-medium text-green-01 hover:text-green-03 js-transition">
+                                <?php echo esc_html($phone); ?>
+                            </a>
                         </p>
-                        <h1 class="mt-4 text-48px 3xl:text-56px text-green-01">
-                            <?php echo esc_html($title); ?>
-                        </h1>
-                        <p class="mt-4 text-16px text-grey-02 max-w-lg">
-                            <?php echo esc_html($description); ?>
+                        <p>
+                            <a href="mailto:<?php echo esc_attr($email); ?>"
+                                class="text-32px font-medium text-green-01 hover:text-green-03 js-transition">
+                                <?php echo esc_html($email); ?>
+                            </a>
                         </p>
-                    </div>
-                    <div class="lg:mt-12 pt-8">
-                        <p class="text-12px font-bold text-green-04 uppercase tracking-wider">
-                            <?php _e("Informações de Contacto", "joaosanches"); ?>
-                        </p>
-                        <div class="mt-4 space-y-2">
-                            <p>
-                                <a href="tel:<?php echo esc_attr(str_replace(' ', '', $phone)); ?>"
-                                    class="text-32px font-medium text-green-01 hover:text-green-03 js-transition">
-                                    <?php echo esc_html($phone); ?>
-                                </a>
-                            </p>
-                            <p>
-                                <a href="mailto:<?php echo esc_attr($email); ?>"
-                                    class="text-32px font-medium text-green-01 hover:text-green-03 js-transition">
-                                    <?php echo esc_html($email); ?>
-                                </a>
-                            </p>
-                        </div>
                     </div>
                 </div>
-
-                <div class="wow animate__animated animate__fadeInRight">
-                    <div class="space-y-4 sm:space-y-10">
-                        <?= do_shortcode("[contact-form-7 id='c490d69']") ?>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
-</main>
 
-<?php
-get_footer();
-?>
+            <div class="wow animate__animated animate__fadeInRight">
+                <div class="space-y-4 sm:space-y-10">
+                    <?= do_shortcode("[contact-form-7 id='c490d69']") ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
 
 
 
