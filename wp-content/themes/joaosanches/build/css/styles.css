@@ -20,7 +20,7 @@ nav ul {
 }
 
 nav ul li {
-  @apply font-medium text-white hover:text-orange js-transition text-16px 3xl:text-20px;
+  @apply lg:text-white hover:text-orange js-transition text-16px ;
 }
 
 #footer-menu {
@@ -28,7 +28,7 @@ nav ul li {
 }
 
 #footer-menu li a {
-  @apply font-medium text-white  js-transition;
+  @apply lg:text-white  js-transition;
 }
 
 .js-transition {
@@ -236,7 +236,7 @@ nav ul li {
 #main-menu-mobile .current-menu-item > a,
 #main-menu-mobile .current-menu-parent > a,
 #main-menu-mobile .current-menu-ancestor > a {
-  @apply text-white;
+  @apply text-black;
 }
 
 /* --- ESTADO PADRÃO (MENU FECHADO) --- */
@@ -248,7 +248,7 @@ nav ul li {
 
 /* A barra de menu visível. */
 #menu {
-  @apply relative z-50 text-white js-transition;
+  @apply relative z-50 js-transition;
 }
 
 /* O painel do menu mobile.*/
@@ -257,21 +257,25 @@ nav ul li {
 }
 
 #mobile-menu ul {
-  @apply flex flex-col gap-4 text-white;
+  @apply flex flex-col gap-4
 }
 
 /* --- QUANDO O MENU ESTÁ ABERTO (.mobile-menu-is-open) --- */
 
 #main-nav.mobile-menu-is-open {
-  @apply bg-white rounded-[50px] shadow-xl;
+  @apply  rounded-[50px] shadow-xl;
 }
 
 #main-nav.mobile-menu-is-open #menu {
-  @apply bg-white shadow-none;
+  @apply  shadow-none;
 }
 
 #main-nav.mobile-menu-is-open #mobile-menu {
   @apply opacity-100 max-h-[500px] rounded-[50px] shadow-xl pointer-events-auto;
+}
+
+#main-nav.mobile-menu-is-open #toggle-menu {
+  @apply text-black;
 }
 
 /* Inputs do formulário de contacto */

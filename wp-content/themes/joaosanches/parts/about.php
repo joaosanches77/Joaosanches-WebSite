@@ -5,7 +5,7 @@ $title = get_field('title_about');
 $description = get_field('description_about');
 ?>
 
-<section class="pt-32 pb-40">
+<section id="sobre" class="pt-32 pb-40">
     <div class="main-container mx-auto">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-10 lg:gap-0">
             <div class="flex justify-center lg:justify-end wow animate__animated animate__fadeIn lg:w-1/3 relative">

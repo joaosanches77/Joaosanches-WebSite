@@ -30,7 +30,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header class="fixed top-0 w-full inset-x-0 z-50">
+  <header class="fixed top-0 w-full inset-x-0 z-50 bg-gradient-to-b from-black to-transparent from-50%">
+    <div class="absolute w-full h-72 bg-black blur-3xl top-1/2 -translate-y-1/2"></div>
     <nav id="main-nav" class=" relative z-30 main-container" aria-label="Top">
       <div id="menu" class="w-full py-6 flex items-center justify-between ">
         <div class="flex items-center">
@@ -44,12 +45,15 @@
             <?php nav_main_menu(); ?>
           </div>
 
+          <div class="hidden lg:flex">
+            <a href="/#contactos"
+              class="border border-white hover:bg-orange hover:border-orange js-transition px-6 py-3 rounded-full text-16px">Contactar</a>
+          </div>
           <div class="flex items-center gap-4">
             <div class="hidden lg:block"> <?php language_selector(); ?>
             </div>
             <div class="lg:hidden">
-              <button type="button" id="toggle-menu"
-                class="p-2 rounded-md inline-flex items-center justify-center text-green-01">
+              <button type="button" id="toggle-menu" class="p-2 rounded-md inline-flex items-center justify-center">
                 <span class="sr-only"><?php _e("Abrir Menu", "joaosanches"); ?></span>
                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor" aria-hidden="true">
@@ -60,7 +64,7 @@
           </div>
         </div>
       </div>
-      <div id="mobile-menu" class=" bg-white rounded-b-3xl transition-main z-10 lg:hidden !overflow-visible">
+      <div id="mobile-menu" class=" rounded-b-3xl transition-main z-10 lg:hidden !overflow-visible">
         <nav class="w-full text-black flex flex-col items-center justify-center gap-10">
           <?php nav_main_menu("main-menu-mobile"); ?>
           <?php echo language_selector(); ?>

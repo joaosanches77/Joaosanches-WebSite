@@ -8,7 +8,7 @@ $phone = get_field('phone');
 $email = get_field('email');
 ?>
 
-<section class="bg-gradient-to-b from-beje-02 to-white padding-nav-small pb-24 sm:pb-40">
+<section id="contactos" class="bg-gradient-to-b from-beje-02 to-white padding-nav-small pb-24 sm:pb-40">
     <div class="main-container mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-5 ">
 
