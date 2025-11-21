@@ -30,12 +30,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header class="fixed top-0 w-full inset-x-0 z-50 bg-gradient-to-b from-black to-transparent from-50%">
-    <div class="absolute w-full h-72 bg-black blur-3xl top-1/2 -translate-y-1/2"></div>
+  <header class="fixed top-0 w-full inset-x-0 z-50 bg-gradient-to-b from-black to-transparent ">
+    <div class="absolute w-[110vw] h-32 lg:h-72 bg-black blur-3xl top-1/2 -translate-y-1/2"></div>
     <nav id="main-nav" class=" relative z-30 main-container" aria-label="Top">
       <div id="menu" class="w-full py-6 flex items-center justify-between ">
         <div class="flex items-center">
-          <a href="<?php echo home_url(); ?>">
+          <a  href="<?php echo home_url(); ?>">
             <div class="w-20 h-20  relative"> <img class=" w-full h-full object-contain"
                 src="<?php echo get_template_directory_uri(); ?>/assets/img/jsnew.png"></div>
           </a>

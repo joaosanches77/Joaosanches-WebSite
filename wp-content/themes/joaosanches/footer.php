@@ -1,12 +1,6 @@
 <?php
-$title = function_exists('get_field') ? get_field("title_footer", "options") : null;
-$contacts = function_exists('get_field') ? get_field("contacts_footer", "options") : null;
-$copyright = function_exists('get_field') ? get_field("copyright", "options") : null;
-$newsletter = function_exists('get_field') ? get_field("newsletter", "options") : null;
 
-$pages_bottom = function_exists('get_field') ? get_field("pages_bottom", "options") : null;
 $social = function_exists('get_field') ? get_field("social", "options") : null;
-
 
 
 ?>
@@ -14,23 +8,23 @@ $social = function_exists('get_field') ? get_field("social", "options") : null;
 
 
 <footer class="">
-  <div class="main-container py-8 overflow-hidden flex justify-between">
+  <div
+    class="main-container py-8 overflow-hidden flex flex-col gap-7 lg:gap-0 lg:flex-row justify-between items-center">
     <div class="text-center sm:text-left mx-auto sm:m-0 flex flex-col justify-center sm:justify-between">
-      <a href="<?php echo home_url(); ?>">
+      <a class="flex items-center gap-4 text-12px" href="<?php echo home_url(); ?>">
         <div class="w-20 h-20  relative"> <img class=" w-full h-full object-contain"
             src="<?php echo get_template_directory_uri(); ?>/assets/img/jsnew.png"></div>
+        © 2025 João Sanches. All rights Reserved.
       </a>
-    </div>
-    <div class="flex flex-col md:flex-row items-center gap-6 text-grey-02">
-      <span class="text-center sm:text-left"><?= $copyright ?></span>
     </div>
     <div class="">
       <?php if (!empty($social) && is_array($social)): ?>
-        <div class="flex flex-col gap-1">
+        <div class="flex gap-5">
           <?php foreach ($social as $item): ?>
-            <?php if (!empty($item['platform']['url']) && !empty($item['platform']['title'])): ?>
-              <a href="<?= esc_url($item['platform']['url']) ?>" target="_blank" rel="noopener noreferrer"
-                class="hover:text-green-03 js-transition text-white" aria-label="<?= esc_attr($item['platform']['title']) ?>">
+            <?php if (!empty($item['platform']['url']['url']) && !empty($item['platform']['title'])): ?>
+              <a href="<?= esc_url($item['platform']['url']['url']) ?>" target="_blank" rel="noopener noreferrer"
+                class="hover:text-green-03 js-transition text-white hover:underline hover:text-orange"
+                aria-label="<?= esc_attr($item['platform']['title']) ?>">
                 <?= $item['platform']['title'] ?>
               </a>
             <?php endif; ?>

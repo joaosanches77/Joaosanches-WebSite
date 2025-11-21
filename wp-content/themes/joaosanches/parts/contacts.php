@@ -1,53 +1,39 @@
 <?php
 
-
-$tagline = get_field('tagline');
-$title = get_field('title');
-$description = get_field('description');
-$phone = get_field('phone');
-$email = get_field('email');
+$title = get_field('title_contact');
+$subtitle = get_field('subtitle_contact');
+$email = get_field('email_contact');
 ?>
 
-<section id="contactos" class="bg-gradient-to-b from-beje-02 to-white padding-nav-small pb-24 sm:pb-40">
+<section id="contactos" class="py-24 sm:py-40 sm:mt-40">
     <div class="main-container mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-5 ">
 
-            <div class="flex flex-col wow animate__animated animate__fadeInLeft">
-                <div>
-                    <p class="text-12px font-bold text-green-04 uppercase tracking-wider">
-                        <?php echo esc_html($tagline); ?>
-                    </p>
-                    <h1 class="mt-4 text-48px 3xl:text-56px text-green-01">
+            <div class="flex flex-col wow animate__animated animate__fadeInLeft relative">
+                <video autoplay muted loop playsinline
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 lg:top-1/2 lg:left-1/2 lg:-translate-x-2/3 lg:-translate-y-1/4 w-1/2 h-1/2 object-cover blur-xl">
+                    <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/fireballs2.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="z-30">
+                    <h2 class="mt-10 text-48px 3xl:text-56px max-w-xl">
                         <?php echo esc_html($title); ?>
-                    </h1>
-                    <p class="mt-4 text-16px text-grey-02 max-w-lg">
-                        <?php echo esc_html($description); ?>
+                    </h2>
+                    <p class="mt-10 text-20px max-w-lg">
+                        <?php echo esc_html($subtitle); ?>
                     </p>
                 </div>
-                <div class="lg:mt-12 pt-8">
-                    <p class="text-12px font-bold text-green-04 uppercase tracking-wider">
-                        <?php _e("Informações de Contacto", "joaosanches"); ?>
-                    </p>
-                    <div class="mt-4 space-y-2">
-                        <p>
-                            <a href="tel:<?php echo esc_attr(str_replace(' ', '', $phone)); ?>"
-                                class="text-32px font-medium text-green-01 hover:text-green-03 js-transition">
-                                <?php echo esc_html($phone); ?>
-                            </a>
-                        </p>
-                        <p>
-                            <a href="mailto:<?php echo esc_attr($email); ?>"
-                                class="text-32px font-medium text-green-01 hover:text-green-03 js-transition">
-                                <?php echo esc_html($email); ?>
-                            </a>
-                        </p>
-                    </div>
+                <div class="mt-10 z-30">
+                    <a href="mailto:<?php echo esc_attr($email); ?>" class="text-16px text-white">Email:
+                        <span
+                            class="hover:text-orange hover:underline js-transition"><?php echo esc_html($email); ?></span>
+                    </a>
                 </div>
             </div>
 
             <div class="wow animate__animated animate__fadeInRight">
                 <div class="space-y-4 sm:space-y-10">
-                    <?= do_shortcode("[contact-form-7 id='c490d69']") ?>
+                    <?= do_shortcode("[contact-form-7 id='ddd3ea0']") ?>
                 </div>
             </div>
 

@@ -15,23 +15,16 @@ $service_3 = get_field('service_3');
                 <?php echo esc_html($title); ?>
             </h1>
         </div>
-        <div
-            class="mt-6 flex-shrink-0 flex flex-col sm:flex-row gap-8 sm:gap-4 md:gap-0 items-center sm:space-x-4 lg:mt-0 wow animate__animated animate__fadeIn z-30">
-            <a href="<?= $product_page_url ?>"
-                class="w-full flex items-center justify-center gap-3 px-8 py-4 text-16px rounded-full text-white hover:text-black hover:bg-white js-transition font-medium border border-white">
-                <?php _e("Ver mais", "joaosanches"); ?>
-
-            </a>
-        </div>
     </div>
     <div
         class="grid grid-cols-1 lg:grid-cols-12 grid-rows-1 lg:grid-rows-2 gap-5 wow animate__animated animate__fadeIn relative mt-10 lg:mt-20">
         <div class="w-48 h-48 bg-blue blur-3xl absolute right-1/2"></div>
+        <div class="w-72 h-48 rotate-45 bg-orange blur-3xl absolute -bottom-24 right-1/2"></div>
         <div
-            class="col-span-6 row-span-1 relative rounded-3xl overflow-hidden flex justify-between items-stretch p-10 text-white w-full h-96">
+            class="col-span-6 lg:row-span-1 relative rounded-3xl overflow-hidden flex justify-between items-stretch p-10 text-white w-full lg:h-96 group">
             <img src="<?= $service_1['image']['url']; ?>" alt="<?= $service_1['image']['alt']; ?>"
                 class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 js-transition"></div>
             <div class="relative flex flex-col rounded-3xl h-full justify-between w-full">
                 <div>
 
@@ -41,7 +34,7 @@ $service_3 = get_field('service_3');
                 </div>
                 <div class="flex justify-end">
                     <a
-                        class="carousel-prev-btn p-2 rounded-full w-10 h-10 flex items-center justify-center gap-3 px-2 py-2 text-16px font-medium group-hover:bg-white group-hover:text-black js-transition border border-white">
+                        class="p-2 rounded-full w-10 h-10 flex items-center justify-center gap-3 px-2 py-2 text-16px font-medium group-hover:bg-white group-hover:text-black js-transition border border-white">
                         <span class="sr-only"><?php _e("Anterior", "joaosanches"); ?></span>
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">
@@ -56,10 +49,10 @@ $service_3 = get_field('service_3');
 
 
         <div
-            class="col-span-6 row-span-2 relative rounded-3xl overflow-hidden flex justify-between items-stretch p-10 text-white w-full h-full">
+            class="col-span-6 lg:row-span-2 relative rounded-3xl overflow-hidden flex justify-between items-stretch p-10 text-white w-full h-full group">
             <img src="<?= $service_3['image']['url']; ?>" alt="<?= $service_3['image']['alt']; ?>"
                 class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 js-transition"></div>
             <div class="relative flex flex-col rounded-3xl h-full justify-between w-full">
                 <div>
 
@@ -69,7 +62,7 @@ $service_3 = get_field('service_3');
                 </div>
                 <div class="flex justify-end">
                     <a
-                        class="carousel-prev-btn p-2 rounded-full w-10 h-10 flex items-center justify-center gap-3 px-2 py-2 text-16px font-medium group-hover:bg-white group-hover:text-black js-transition border border-white">
+                        class="p-2 rounded-full w-10 h-10 flex items-center justify-center gap-3 px-2 py-2 text-16px font-medium group-hover:bg-white group-hover:text-black js-transition border border-white">
                         <span class="sr-only"><?php _e("Anterior", "joaosanches"); ?></span>
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">
@@ -84,10 +77,10 @@ $service_3 = get_field('service_3');
 
 
         <div
-            class="col-span-6 row-span-1 relative rounded-3xl overflow-hidden flex justify-between items-stretch p-10 text-white w-full h-full">
+            class="col-span-6 lg:row-span-1 relative rounded-3xl overflow-hidden flex justify-between items-stretch p-10 text-white w-full h-full group">
             <img src="<?= $service_2['image']['url']; ?>" alt="<?= $service_2['image']['alt']; ?>"
                 class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 js-transition"></div>
             <div class="relative flex flex-col rounded-3xl h-full justify-between w-full">
                 <div>
 
@@ -97,7 +90,7 @@ $service_3 = get_field('service_3');
                 </div>
                 <div class="flex justify-end">
                     <a
-                        class="carousel-prev-btn p-2 rounded-full w-10 h-10 flex items-center justify-center gap-3 px-2 py-2 text-16px font-medium group-hover:bg-white group-hover:text-black js-transition border border-white">
+                        class="p-2 rounded-full w-10 h-10 flex items-center justify-center gap-3 px-2 py-2 text-16px font-medium group-hover:bg-white group-hover:text-black js-transition border border-white">
                         <span class="sr-only"><?php _e("Anterior", "joaosanches"); ?></span>
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">

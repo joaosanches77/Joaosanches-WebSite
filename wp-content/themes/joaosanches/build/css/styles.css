@@ -281,22 +281,25 @@ nav ul li {
 /* Inputs do formulário de contacto */
 
 .inputs-form {
-  @apply w-full bg-transparent border border-grey-light rounded-full px-6 py-4 text-white placeholder:text-grey-dark focus:ring-white focus:border-white outline-none js-transition;
+  @apply w-full bg-transparent border-b border-grey-light py-4 text-white placeholder:text-grey-dark focus:ring-white focus:border-white outline-none js-transition;
 }
 
 .button-form {
-  @apply w-full inline-flex items-center justify-center gap-3 px-8 py-4 mt-4 border border-transparent rounded-full shadow-sm text-16px font-medium text-white bg-white/20 hover:bg-white/40 js-transition;
+  @apply w-full inline-flex items-center justify-center gap-3 px-6 py-4 mt-4 border border-white rounded-full shadow-sm text-16px font-medium text-white bg-transparent js-transition;
 }
 
 .select-input {
-  @apply w-full bg-transparent placeholder:text-grey-dark outline-none;
+  @apply w-full bg-transparent border-b py-4 border-grey-light text-white placeholder:text-grey-dark focus:ring-white focus:border-white outline-none js-transition;
 }
 
 .input-textarea {
-  @apply w-full bg-transparent border border-grey-light rounded-3xl px-6 py-4 text-white placeholder:text-grey-dark focus:ring-white focus:border-white outline-none js-transition;
+  @apply w-full bg-transparent border-b border-grey-light py-4 text-white placeholder:text-grey-dark focus:ring-white focus:border-white outline-none js-transition;
 }
 .input-terms {
   @apply text-12px text-grey-dark my-10;
+}
+.wpcf7-list-item{
+  @apply !ml-0;
 }
 
 /* cookies */

@@ -7,8 +7,8 @@ $product_page_url = get_post_type_archive_link('works');
 
 
 <section id="trabalhos" class=" pt-16 sm:pt-20 pb-24 sm:pb-40 relative">
-    <div class="w-48 h-48 bg-orange blur-3xl absolute -top-32 right-0"></div>
-    <div class="main-container flex lg:flex-col flex-col-reverse">
+    <div class="w-72 h-48 rotate-45 bg-orange blur-3xl absolute -top-32 right-0"></div>
+    <div class="main-container flex flex-col">
         <div class="flex flex-col lg:flex-row justify-between">
             <div class="text-left flex flex-col gap-6 justify-center wow animate__animated animate__fadeIn">
                 <h1 class="text-32px tracking-tight text-green-01 sm:text-40px 3xl:text-56px !leading-[1.14] max-w-xl">
@@ -16,7 +16,7 @@ $product_page_url = get_post_type_archive_link('works');
                 </h1>
             </div>
             <div
-                class="mt-6 flex-shrink-0 flex flex-col sm:flex-row gap-8 sm:gap-4 md:gap-0 items-center sm:space-x-4 lg:mt-0 wow animate__animated animate__fadeIn z-30">
+                class="mt-6 flex-shrink-0 lg:flex-col gap-8 sm:gap-4 md:gap-0 items-center sm:space-x-4 lg:mt-0 wow animate__animated animate__fadeIn z-30 hidden lg:flex">
                 <a href="<?= $product_page_url ?>"
                     class="w-full flex items-center justify-center gap-3 px-8 py-4 text-16px rounded-full text-white hover:text-black hover:bg-white js-transition font-medium border border-white">
                     <?php _e("Ver mais", "joaosanches"); ?>
@@ -133,6 +133,14 @@ $product_page_url = get_post_type_archive_link('works');
                 ?>
 
             </div>
+        </div>
+        <div
+            class="mt-6 flex-shrink-0 flex flex-col gap-8 sm:gap-4 md:gap-0 items-center sm:space-x-4 lg:mt-0 wow animate__animated animate__fadeIn z-30 lg:hidden">
+            <a href="<?= $product_page_url ?>"
+                class="w-full flex items-center justify-center gap-3 px-8 py-4 text-16px rounded-full text-white hover:text-black hover:bg-white js-transition font-medium border border-white">
+                <?php _e("Ver mais", "joaosanches"); ?>
+
+            </a>
         </div>
     </div>
 
