@@ -1,11 +1,13 @@
 <?php
 
-$title = get_field('title_contact');
-$subtitle = get_field('subtitle_contact');
-$email = get_field('email_contact');
+$title = function_exists('get_field') ? get_field("title_contact", "options") : null;
+$subtitle = function_exists('get_field') ? get_field("subtitle_contact", "options") : null;
+$email = function_exists('get_field') ? get_field("email_contact", "options") : null;
+
+
 ?>
 
-<section id="contactos" class="py-24 sm:py-40 sm:mt-40">
+<section id="contactos" class="py-24 sm:py-40 sm:mt-20">
     <div class="main-container mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-5 ">
 

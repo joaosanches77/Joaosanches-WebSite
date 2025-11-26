@@ -15,6 +15,9 @@ get_template_part("parts/worksHighlights");
 // Services Highlights
 get_template_part("parts/servicesHighlights");
 
+// Testimonials
+get_template_part("parts/testimonials");
+
 // Contacts
 get_template_part("parts/contacts");
 

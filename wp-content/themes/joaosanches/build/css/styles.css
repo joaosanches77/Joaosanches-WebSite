@@ -159,6 +159,33 @@ nav ul li {
   margin: auto;
 }
 
+.typed-cursor {
+    color: #FA4F00;
+    font-weight: normal;
+}
+
+/* FORÇAR ALTURA IGUAL NO OWL CAROUSEL */
+
+/* 1. Transforma a 'faixa' do carrossel num contentor Flex */
+.testimonial-carousel .owl-stage {
+    display: flex !important;
+}
+
+/* 2. Obriga cada slide individual a esticar até à altura máxima */
+.testimonial-carousel .owl-item {
+    display: flex;
+    flex: 1 0 auto; 
+    height: auto !important; /* O !important sobrepõe o JS do plugin */
+}
+
+/* 3. Garante que o contentor interno ocupa a largura e altura totais */
+.testimonial-carousel .item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
 .main-container {
   margin: auto;
 }
@@ -309,11 +336,11 @@ nav ul li {
 }
 
 #cookiescript_buttons #cookiescript_accept {
-  @apply bg-white js-transition rounded-3xl;
+  @apply bg-orange js-transition rounded-3xl;
 }
 
 #cookiescript_buttons #cookiescript_accept:hover {
-  @apply bg-white js-transition;
+  @apply bg-white text-black js-transition;
 }
 
 #cookiescript_buttons #cookiescript_reject {
@@ -368,4 +395,53 @@ nav ul li {
 
 #badges-bar.is-docked {
   @apply absolute bottom-0 left-0 right-0;
+}
+
+@keyframes float-organic {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    /* Vai para a direita e para cima, e cresce um pouco */
+    transform: translate(70px, -90px) scale(1.1);
+  }
+  66% {
+    /* Vai para a esquerda e para baixo, e encolhe um pouco */
+    transform: translate(-80px, 80px) scale(0.9);
+  }
+  100% {
+    /* Volta à posição original */
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-float {
+  /* 10 segundos para um movimento fluido */
+  animation: float-organic 10s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ATRASOS PARA CRIAR DESORDEM */
+/* Isto é essencial para que duas manchas não se mexam "ao mesmo tempo" */
+.delay-2000 {
+  animation-delay: -2s;
+}
+.delay-5000 {
+  animation-delay: -5s;
+}
+
+/* Estilo Base do Botão de Filtro */
+.filter-btn {
+    transition: all 0.3s ease;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+/* Estado HOVER (Passar o rato) e ACTIVE (Selecionado) */
+.filter-btn:hover,
+.filter-btn.is-active {
+    background-color: #ffffff !important; /* Força o fundo branco */
+    color: #000000 !important;           /* Força o texto preto */
+    border-color: #ffffff !important;
 }

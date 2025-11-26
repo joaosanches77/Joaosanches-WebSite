@@ -47,7 +47,14 @@ $social = function_exists('get_field') ? get_field("social", "options") : null;
 
 <?php wp_footer(); ?>
 
+<a id="back-to-top" href="#"
+  class="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-[#FF4500] text-white flex items-center justify-center shadow-lg transition-all duration-500 opacity-0 invisible hover:-translate-y-2 hover:shadow-xl group">
 
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
+    class="w-8 h-8 group-hover:scale-110 transition-transform duration-300">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+  </svg>
+</a>
 </body>
 
 </html>

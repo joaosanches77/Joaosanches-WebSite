@@ -1,7 +1,7 @@
 /*! Theme Script
  * https://joaosanches.pt/ */
 jQuery(document).ready(function ($) {
-  console.log("=== VERSION 001 ===");
+  console.log("=== VERSION 002 (Filter Update) ===");
 
   var screenWidth = window.innerWidth;
   if ($("#screensize").length) {
@@ -331,6 +331,35 @@ jQuery(document).ready(function ($) {
       dots: true, // Ativa os pontos de navegação
     });
   }
+
+  //////////////////////////////////////////////////
+  // CARROSSEL DE TESTEMUNHOS (HOMEPAGE)
+  //////////////////////////////////////////////////
+  var $testiCarousel = $(".testimonial-carousel");
+
+  if ($testiCarousel.length) {
+    $testiCarousel.owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: false,
+      dots: false,
+      autoplay: true, // Roda sozinho
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true, // Para se o rato estiver em cima
+      smartSpeed: 1000, // Transição suave
+      responsive: {
+        0: {
+          items: 1, // 1 testemunho em mobile
+        },
+        768: {
+          items: 2, // 2 testemunhos em tablet
+        },
+        1280: {
+          items: 3, // 3 testemunhos em desktop grande
+        },
+      },
+    });
+  }
   ///////////////////////////////////
   // MODAL
   ///////////////////////////////////
@@ -433,45 +462,68 @@ jQuery(document).ready(function ($) {
   });
 
   // ///////////////////////////////////
-  // FILTRO DE PRODUTOS
+  // FILTRO DE TRABALHOS (VERSÃO FINAL CSS)
   // ///////////////////////////////////
 
-  $(".filter-btn").on("click", function (e) {
+  $(document).on("click", ".filter-btn", function (e) {
     e.preventDefault();
 
     var $this = $(this);
+
+    // Impede clique se já estiver ativo
+    if ($this.hasClass("is-active")) {
+      return;
+    }
+
     var category = $this.data("filter");
-    var $productGrid = $("#product-grid");
+    var $workGrid = $("#work-grid");
 
-    // Atualiza o estado visual dos botões
-    $(".filter-btn")
-      .removeClass("is-active bg-green-04 text-white")
-      .addClass(" text-green-01");
-    $this
-      .addClass("is-active bg-green-04 text-white")
-      .removeClass(" text-green-01");
+    // 1. Lógica Visual (Muito mais simples)
+    $(".filter-btn").removeClass("is-active"); // Tira de todos
+    $this.addClass("is-active"); // Põe no clicado
 
+    // 2. Lógica AJAX (Mantém-se igual)
     $.ajax({
       url: my_ajax_object.ajax_url,
       type: "post",
       data: {
-        action: "filter_products",
+        action: "filter_works",
         category: category,
       },
       beforeSend: function () {
-        // Efeito de loading: a grelha fica semi-transparente
-        $productGrid.css("opacity", 0.5);
+        $workGrid.css("opacity", 0.5);
       },
       success: function (response) {
-        // Substitui o conteúdo da grelha pela resposta do AJAX
-        $productGrid.html(response);
+        $workGrid.html(response);
       },
       complete: function () {
-        // Remove o efeito de loading
-        $productGrid.css("opacity", 1);
+        $workGrid.css("opacity", 1);
       },
     });
   });
+
+  // 2. DETETAR URL E DISPARAR O CLIQUE (Automático)
+  // Corre depois de o ouvinte estar definido
+  const urlParams = new URLSearchParams(window.location.search);
+  const categorySlug = urlParams.get("category");
+
+  if (categorySlug) {
+    const $targetBtn = $('.filter-btn[data-filter="' + categorySlug + '"]');
+
+    if ($targetBtn.length > 0) {
+      // Dispara o clique no botão correto
+      $targetBtn.trigger("click");
+
+      // Scroll suave até aos botões
+      $("html, body").animate(
+        {
+          scrollTop: $(".filter-btn").first().offset().top - 150,
+        },
+        500
+      );
+    }
+  }
+
   //////////////////////////////////////////////////
   // LÓGICA PARA A BARRA DE BADGES 'STICKY' INTELIGENTE
   //////////////////////////////////////////////////
@@ -508,4 +560,56 @@ jQuery(document).ready(function ($) {
     // Diz ao observador para começar a vigiar a secção do herói
     observer.observe(heroSection);
   }
+
+  //////////////////////////////////////////////////
+  // TYPE HERO EFFECT
+  //////////////////////////////////////////////////
+
+  // Verifica se o elemento existe para evitar erros noutras páginas
+  const typedElement = document.querySelector(".typed");
+
+  if (typedElement) {
+    // Vai buscar a lista de palavras ao atributo data-typed-items
+    let typed_strings = typedElement.getAttribute("data-typed-items");
+
+    // Separa a string por vírgulas para criar um Array
+    typed_strings = typed_strings.split(",");
+
+    new Typed(".typed", {
+      strings: typed_strings, // Passa o array de palavras
+      loop: true, // Loop infinito
+      typeSpeed: 100, // Velocidade a escrever (ms)
+      backSpeed: 50, // Velocidade a apagar (ms)
+      backDelay: 1000, // Tempo de espera antes de apagar (2 segundos)
+      showCursor: true, // Mostrar o cursor a piscar |
+      cursorChar: "|", // O caracter do cursor
+      autoInsertCss: true, // Insere o CSS do cursor automaticamente
+    });
+  }
+
+  ///////////////////////////////////
+  // BACK TO TOP BUTTON
+  ///////////////////////////////////
+
+  var $backToTopBtn = $("#back-to-top");
+
+  $(window).on("scroll", function () {
+    // Se o scroll for maior que 300px, mostra o botão
+    if ($(window).scrollTop() > 300) {
+      $backToTopBtn
+        .removeClass("opacity-0 invisible")
+        .addClass("opacity-100 visible");
+    } else {
+      // Se estiver no topo, esconde
+      $backToTopBtn
+        .addClass("opacity-0 invisible")
+        .removeClass("opacity-100 visible");
+    }
+  });
+
+  // Ao clicar, sobe suavemente
+  $backToTopBtn.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, 800); // 800ms de duração
+  });
 });

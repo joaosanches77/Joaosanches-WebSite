@@ -5,7 +5,7 @@ $title = get_field('title_about');
 $description = get_field('description_about');
 ?>
 
-<section id="sobre" class="pt-32 pb-40">
+<section id="sobre" class="pt-0 lg:pt-32 pb-40">
     <div class="main-container mx-auto">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-10 lg:gap-0">
             <div class="flex justify-center lg:justify-end wow animate__animated animate__fadeIn lg:w-1/3 relative">
@@ -24,9 +24,11 @@ $description = get_field('description_about');
                     <h2 class="mt-4 text-48px 3xl:text-56px text-green-01">
                         <?php echo esc_html($title); ?>
                     </h2>
-                    <p class="mt-6 text-16px text-grey-02">
-                        <?php echo esc_html($description); ?>
-                    </p>
+                    <?php if ($description): ?>
+                        <div class="mt-6 text-16px text-grey-02">
+                            <?php echo wp_kses_post(wpautop($description)); ?>
+                        </div>
+                    <?php endif; ?>
 
                 </div>
 

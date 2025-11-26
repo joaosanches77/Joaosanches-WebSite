@@ -20,11 +20,15 @@
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <link rel="icon" href="<?= get_template_directory_uri() . "/assets/favicon.ico" ?>" type="image/x-icon" />
 
+  <script type="text/javascript" charset="UTF-8"
+    src="//cdn.cookie-script.com/s/9af0085cb2d33d870a63dfac78c75969.js"></script>
 
   <?php wp_head(); ?>
 
 
   <script src="<?= get_template_directory_uri() . "/dist/script/lib/owl.carousel.min.js" ?>"></script>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
   <meta name="google-site-verification" content="" />
 </head>
@@ -35,7 +39,7 @@
     <nav id="main-nav" class=" relative z-30 main-container" aria-label="Top">
       <div id="menu" class="w-full py-6 flex items-center justify-between ">
         <div class="flex items-center">
-          <a  href="<?php echo home_url(); ?>">
+          <a href="<?php echo home_url(); ?>">
             <div class="w-20 h-20  relative"> <img class=" w-full h-full object-contain"
                 src="<?php echo get_template_directory_uri(); ?>/assets/img/jsnew.png"></div>
           </a>

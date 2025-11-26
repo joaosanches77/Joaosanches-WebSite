@@ -5,13 +5,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /
+RewriteBase /Joaosanches-WebSite/
 RewriteRule ^index\.php$ - [L]
-RewriteRule ^en/wp-login.php /wp-login.php [QSA,L]
-RewriteRule ^pt-pt/wp-login.php /wp-login.php [QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+RewriteRule . /Joaosanches-WebSite/index.php [L]
 </IfModule>
 
 # END WordPress

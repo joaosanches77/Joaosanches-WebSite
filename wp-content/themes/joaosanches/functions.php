@@ -470,3 +470,26 @@ function naked_register_sidebars()
     );
 }
 add_action('widgets_init', 'naked_register_sidebars');
+
+
+// -----------------------------------------------------------------------------
+// Registo de Testemunhos
+// -----------------------------------------------------------------------------
+
+function registar_cpt_testemunhos()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Testemunhos',
+            'singular_name' => 'Testemunho',
+            'add_new' => 'Adicionar Novo',
+            'add_new_item' => 'Adicionar Novo Testemunho',
+        ),
+        'public' => false,  // Não precisa de ter uma página individual (single)
+        'show_ui' => true,   // Mostra no menu do admin
+        'menu_icon' => 'dashicons-format-quote', // Ícone de aspas
+        'supports' => array('title'), // Só precisamos do título para organização interna
+    );
+    register_post_type('testimonial', $args);
+}
+add_action('init', 'registar_cpt_testemunhos');
