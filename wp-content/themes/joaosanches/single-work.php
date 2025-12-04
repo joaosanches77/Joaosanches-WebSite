@@ -71,8 +71,11 @@ if ($categories && !is_wp_error($categories)) {
                                 $img = get_sub_field('image');
                                 if ($img):
                                     ?>
+                                    <?php
+                                    $aspect_class = ($width === 'half' || $width === '50') ? 'aspect-square' : 'aspect-video';
+                                    ?>
                                     <img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>"
-                                        class="w-full h-auto rounded-lg shadow-sm block z-30">
+                                        class="w-full <?php echo $aspect_class; ?> rounded-lg shadow-sm block z-30 object-cover">
                                     <?php
                                 endif;
 
@@ -86,16 +89,58 @@ if ($categories && !is_wp_error($categories)) {
                                 </div>
 
                                 <?php
-                                // --- CASO 3: VÍDEO ---
+                                // --- CASO 3: VÍDEO (Já tinhas este) ---
                             elseif ($type === 'video'):
-                                $video_url = get_sub_field('video'); // URL do ficheiro ou link
+                                $video_url = get_sub_field('video');
                                 if ($video_url):
                                     ?>
-                                    <div class="rounded-lg overflow-hidden relative w-full aspect-video shadow-sm z-30">
+                                    <div class="rounded-lg overflow-hidden relative w-full aspect-video shadow-sm">
                                         <video controls class="w-full h-full object-cover">
                                             <source src="<?php echo esc_url($video_url); ?>" type="video/mp4">
-                                            Seu navegador não suporta vídeos.
                                         </video>
+                                    </div>
+                                    <?php
+                                endif;
+
+                                // --- CASO 4: GALERIA (NOVO) ---
+                            elseif ($type === 'gallery'):
+                                $images = get_sub_field('gallery');
+                                if ($images):
+                                    // Gerar um ID único caso tenhas várias galerias na mesma página
+                                    $unique_id = 'gallery-' . get_row_index();
+                                    ?>
+                                    <div class="relative group">
+
+                                        <div id="<?php echo $unique_id; ?>"
+                                            class="owl-carousel work-gallery-carousel owl-theme rounded-lg overflow-hidden shadow-sm">
+                                            <?php foreach ($images as $image): ?>
+                                                <div class="item">
+                                                    <?php
+                                                    $aspect_class = ($width === 'half' || $width === '50') ? 'aspect-square' : 'aspect-video';
+                                                    ?>
+                                                    <img src="<?php echo esc_url($image['sizes']['large']); ?>"
+                                                        alt="<?php echo esc_attr($image['alt']); ?>"
+                                                        class="w-full <?php echo $aspect_class; ?> rounded-lg shadow-sm block object-cover">
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+
+                                        <button
+                                            class="custom-prev-<?php echo $unique_id; ?> absolute top-1/2 left-4 -translate-y-1/2 w-12 h-12 bg-black/30 border border-white/20 backdrop-blur-md text-white rounded-full flex items-center justify-center transition-all z-10 hover:bg-white hover:text-black hover:border-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                                stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                            </svg>
+                                        </button>
+
+                                        <button
+                                            class="custom-next-<?php echo $unique_id; ?> absolute top-1/2 right-4 -translate-y-1/2 w-12 h-12 bg-black/30 border border-white/20 backdrop-blur-md text-white rounded-full flex items-center justify-center transition-all z-10 hover:bg-white hover:text-black hover:border-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                                stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                            </svg>
+                                        </button>
+
                                     </div>
                                     <?php
                                 endif;

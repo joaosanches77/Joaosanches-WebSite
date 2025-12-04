@@ -360,6 +360,33 @@ jQuery(document).ready(function ($) {
       },
     });
   }
+
+  ///////////////////////////////////
+  // GALERIA DE BLOCOS (WORK DETAIL)
+  ///////////////////////////////////
+  $(".work-gallery-carousel").each(function () {
+    var $carousel = $(this);
+    var id = $carousel.attr("id"); // Pega o ID único (ex: gallery-1)
+
+    $carousel.owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 0,
+      nav: false, // Desativamos as setas padrão feias
+      dots: true, // Bolinhas em baixo
+      autoplay: false, // Podes mudar para true se quiseres que rode sozinho
+      smartSpeed: 800,
+      autoHeight: false,
+    });
+
+    // Ligar os botões personalizados
+    $(".custom-next-" + id).click(function () {
+      $carousel.trigger("next.owl.carousel");
+    });
+    $(".custom-prev-" + id).click(function () {
+      $carousel.trigger("prev.owl.carousel");
+    });
+  });
   ///////////////////////////////////
   // MODAL
   ///////////////////////////////////
