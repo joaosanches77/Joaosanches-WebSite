@@ -1934,8 +1934,7 @@ nav ul li:hover {
 #main-menu-mobile .current-menu-item > a,
 #main-menu-mobile .current-menu-parent > a,
 #main-menu-mobile .current-menu-ancestor > a {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+  opacity: 1;
 }
 
 /* --- ESTADO PADRÃO (MENU FECHADO) --- */

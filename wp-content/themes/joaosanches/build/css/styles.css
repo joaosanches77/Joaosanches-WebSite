@@ -263,7 +263,7 @@ nav ul li {
 #main-menu-mobile .current-menu-item > a,
 #main-menu-mobile .current-menu-parent > a,
 #main-menu-mobile .current-menu-ancestor > a {
-  @apply text-black;
+  @apply opacity-100;
 }
 
 /* --- ESTADO PADRÃO (MENU FECHADO) --- */
