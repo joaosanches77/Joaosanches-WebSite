@@ -154,7 +154,7 @@ if ($categories && !is_wp_error($categories)) {
                 </div>
 
             <?php else: ?>
-                <p class="text-center text-grey-02">Conteúdo a ser inserido.</p>
+                <p class="text-center text-white">Portfólio em Construção. Volte mais tarde 😄</p>
             <?php endif; ?>
 
         </div>

@@ -134,7 +134,7 @@ $work_tags = get_the_terms(get_the_ID(), 'work_tag');
         </div>
         <div
             class="mt-6 flex-shrink-0 flex flex-col gap-8 sm:gap-4 md:gap-0 items-center sm:space-x-4 lg:mt-0 wow animate__animated animate__fadeIn z-30 lg:hidden">
-            <a href="<?= $work_page_url ?>"
+            <a href="<?= $button["url"] ?>"
                 class="w-full flex items-center justify-center gap-3 px-8 py-4 text-16px rounded-full text-white hover:text-black hover:bg-white js-transition font-medium border border-white">
                 <?php _e("Ver mais", "joaosanches"); ?>
 
